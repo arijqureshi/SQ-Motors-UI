@@ -1,14 +1,14 @@
 const About = () => {
   return (
-    <section id="about" className="py-16 bg-white">
+    <section id="about" className="py-16 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               About SQ Motors
             </h2>
-            <div className="space-y-4 text-gray-600">
+            <div className="space-y-4 text-gray-300">
               <p>
                 At SQ Motors LLC, we pride ourselves on providing high-quality pre-owned vehicles that meet the highest standards of excellence and reliability. With years of experience in the automotive industry, our team is dedicated to helping you find the perfect vehicle that fits your needs and budget.
               </p>
@@ -19,7 +19,7 @@ const About = () => {
                 Located in the heart of the community, we're committed to making your car buying experience as smooth and stress-free as possible. From our extensive warranty coverage to flexible financing options, we're here to support you every step of the way.
               </p>
             </div>
-            <button className="mt-8 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            <button className="mt-8 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
               Learn More
             </button>
           </div>
