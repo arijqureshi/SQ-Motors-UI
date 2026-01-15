@@ -1,7 +1,16 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: Michroma;
+  src: url('../src/assets/fonts/michroma-regular.ttf');
+}
+
+@theme {
+  --font-family-sans: Michroma, sans-serif;
+}
+
 @layer base {
   body {
-    @apply font-sans antialiased;
+    font-family: var(--font-family-sans);
   }
 }

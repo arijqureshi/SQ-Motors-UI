@@ -10,13 +10,10 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-gray-300">
               <p>
-                At SQ Motors LLC, we pride ourselves on providing high-quality pre-owned vehicles that meet the highest standards of excellence and reliability. With years of experience in the automotive industry, our team is dedicated to helping you find the perfect vehicle that fits your needs and budget.
+                At SQ Motors LLC, we specialize in selling high-quality cars at fair and competitive prices. Our commitment to customer satisfaction is our number one priority.
               </p>
               <p>
-                Every vehicle in our inventory undergoes a comprehensive inspection process to ensure it meets our strict quality standards. We believe in transparency and building long-term relationships with our customers based on trust and exceptional service.
-              </p>
-              <p>
-                Located in the heart of the community, we're committed to making your car buying experience as smooth and stress-free as possible. From our extensive warranty coverage to flexible financing options, we're here to support you every step of the way.
+                We believe in providing an exceptional car buying experience with transparency, honesty, and outstanding service. Every customer deserves to drive away happy in a vehicle they love.
               </p>
             </div>
             <button className="mt-8 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
