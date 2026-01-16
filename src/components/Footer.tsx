@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-5 gap-6 lg:gap-8">
           {/* Company Info */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 lg:col-span-2">
             <div className="flex items-center mb-4">
               <img 
                 src="/src/assets/sq-motors-logo-transparent.png" 
@@ -53,6 +53,25 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Business Hours */}
+          <div className="md:col-span-1">
+            <h3 className="text-lg font-semibold mb-4">Business Hours</h3>
+            <div className="space-y-2 text-gray-300 text-sm">
+              <div className="flex justify-between min-w-[140px]">
+                <span>Mon - Fri:</span>
+                <span className="font-medium">{COMPANY_INFO.hours.monday}</span>
+              </div>
+              <div className="flex justify-between min-w-[140px]">
+                <span>Saturday:</span>
+                <span className="font-medium">{COMPANY_INFO.hours.saturday}</span>
+              </div>
+              <div className="flex justify-between min-w-[140px]">
+                <span>Sunday:</span>
+                <span className="font-medium text-red-400">{COMPANY_INFO.hours.sunday}</span>
+              </div>
+            </div>
+          </div>
+
           {/* Social Media */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
@@ -77,7 +96,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 SQ MOTORS LLC. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>
