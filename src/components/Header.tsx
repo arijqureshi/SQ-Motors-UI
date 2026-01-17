@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,10 +19,11 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 ml-8">
+            <Link to="/home" className="text-white hover:text-red-600 transition-colors">Home</Link>
             <a href="#about" className="text-white hover:text-red-600 transition-colors">About Us</a>
             <a href="#warranty" className="text-white hover:text-red-600 transition-colors">Warranty</a>
             <a href="#financing" className="text-white hover:text-red-600 transition-colors">Financing</a>
-            <a href="#contact" className="text-white hover:text-red-600 transition-colors">Contact</a>
+            <Link to="/contact" className="text-white hover:text-red-600 transition-colors">Contact</Link>
           </nav>
 
           {/* Desktop Icons */}
@@ -60,10 +62,11 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-3">
+              <Link to="/home" className="text-white hover:text-red-600 transition-colors">Home</Link>
               <a href="#about" className="text-white hover:text-red-600 transition-colors">About Us</a>
               <a href="#warranty" className="text-white hover:text-red-600 transition-colors">Warranty</a>
               <a href="#financing" className="text-white hover:text-red-600 transition-colors">Financing</a>
-              <a href="#contact" className="text-white hover:text-red-600 transition-colors">Contact</a>
+              <Link to="/contact" className="text-white hover:text-red-600 transition-colors">Contact</Link>
             </nav>
           </div>
         )}
