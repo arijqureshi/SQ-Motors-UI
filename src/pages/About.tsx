@@ -132,14 +132,24 @@ const About = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Meet Our Team</h3>
                 <div className="grid md:grid-cols-2 gap-8">
                   {[
-                    { name: 'Saad Qureshi', role: 'Founder & CEO', description: 'With years of experience in the automotive industry, Saad leads our team with vision and expertise.' },
-                    { name: 'Asad Ali', role: 'Sales Manager', description: 'Asad ensures every customer receives personalized attention and exceptional service.' },
+                    { name: 'Saad Qureshi', role: 'Founder & CEO', description: 'With years of experience in the automotive industry, Saad leads our team with vision and expertise.', headshot: '/src/assets/team/saad-headshot.jpeg' },
+                    { name: 'Asad Ali', role: 'Sales Manager', description: 'Asad ensures every customer receives personalized attention and exceptional service.', headshot: '/src/assets/team/asad-headshot.jpg' },
                   ].map((member, index) => (
                     <div key={index} className="text-center">
-                      <div className="bg-gray-200 rounded-full w-32 h-32 mx-auto mb-4 flex items-center justify-center">
-                        <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
+                      <div className="rounded-full w-32 h-32 mx-auto mb-4 overflow-hidden bg-gray-200">
+                        {member.headshot ? (
+                          <img 
+                            src={member.headshot} 
+                            alt={`${member.name} headshot`}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center">
+                            <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                          </div>
+                        )}
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900">{member.name}</h4>
                       <p className="text-red-600 mb-2">{member.role}</p>
