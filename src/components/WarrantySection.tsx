@@ -55,9 +55,9 @@ const WarrantySection = () => {
             <p className="text-gray-600 mb-4">
               Have questions? Our knowledgeable staff is here to help. Reach out via phone, email, or visit our showroom today.
             </p>
-            <button className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
-              Learn More →
-            </button>
+            <a href="/contact" className="text-blue-600 font-medium hover:text-blue-700 transition-colors inline-flex items-center">
+                          Learn More <span aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
       </div>
