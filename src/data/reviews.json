@@ -4,23 +4,23 @@
     "author": "James M.",
     "rating": 5,
     "date": "2025-01-15",
-    "vehicle": "2022 Dodge Challenger Hellcat",
-    "review": "Best car buying experience I've ever had. The team at SQ Motors went above and beyond to find me the exact Hellcat I was looking for. No pressure, honest pricing, and they even helped me secure great financing. Highly recommend!"
+    "vehicle": "2018 Toyota Camry SE",
+    "review": "Best car buying experience I've ever had. The team at SQ Motors went above and beyond to find me the exact Camry I was looking for. No pressure, honest pricing, and they even helped me secure great financing. Highly recommend!"
   },
   {
     "id": 2,
     "author": "Sarah T.",
     "rating": 5,
     "date": "2025-01-10",
-    "vehicle": "2021 Ford Mustang GT",
-    "review": "I drove 3 hours to visit SQ Motors and it was absolutely worth it. The inventory was impressive and the staff knew their stuff. Got a fair price on my Mustang and the whole process took less than 2 hours."
+    "vehicle": "2017 Honda Civic EX",
+    "review": "I drove 3 hours to visit SQ Motors and it was absolutely worth it. The inventory was impressive and the staff knew their stuff. Got a fair price on my Civic and the whole process took less than 2 hours."
   },
   {
     "id": 3,
     "author": "Mike R.",
     "rating": 5,
     "date": "2025-01-05",
-    "vehicle": "2023 Chevrolet Camaro SS",
+    "vehicle": "2019 Nissan Altima SR",
     "review": "Transparent, professional, and no hidden fees. They showed me the carfax upfront and were honest about the vehicle history. The warranty options they offered gave me real peace of mind. Will definitely be back for my next ride."
   },
   {
@@ -28,55 +28,55 @@
     "author": "Jennifer L.",
     "rating": 5,
     "date": "2024-12-28",
-    "vehicle": "2020 Dodge Charger R/T",
-    "review": "As a first-time buyer, I was nervous about the process. The team at SQ Motors made everything simple and explained every step. They found me a Charger in perfect condition within my budget. Couldn't be happier!"
+    "vehicle": "2016 Ford Fusion SE",
+    "review": "As a first-time buyer, I was nervous about the process. The team at SQ Motors made everything simple and explained every step. They found me a Fusion in perfect condition within my budget. Couldn't be happier!"
   },
   {
     "id": 5,
     "author": "David K.",
     "rating": 5,
     "date": "2024-12-20",
-    "vehicle": "2022 Ford Mustang Mach 1",
-    "review": "Finally found a Mach 1 that wasn't marked up to the moon. SQ Motors has fair prices and a no-nonsense approach. The car was exactly as described. Five stars across the board."
+    "vehicle": "2018 Hyundai Elantra Limited",
+    "review": "Finally found an Elantra that wasn't marked up to the moon. SQ Motors has fair prices and a no-nonsense approach. The car was exactly as described. Five stars across the board."
   },
   {
     "id": 6,
     "author": "Amanda S.",
     "rating": 5,
     "date": "2024-12-12",
-    "vehicle": "2021 Dodge Challenger R/T",
-    "review": "I've bought from big dealerships before and hated the experience. SQ Motors is different—smaller, personal, and they actually listen to what you want. Got a beautiful Challenger and felt respected throughout."
+    "vehicle": "2017 Chevrolet Malibu LT",
+    "review": "I've bought from big dealerships before and hated the experience. SQ Motors is different—smaller, personal, and they actually listen to what you want. Got a beautiful Malibu and felt respected throughout."
   },
   {
     "id": 7,
     "author": "Robert H.",
     "rating": 5,
     "date": "2024-12-05",
-    "vehicle": "2023 Chevrolet Corvette",
-    "review": "Dream car achieved! SQ Motors had the Corvette I'd been hunting for months. The team was knowledgeable about the car's specs and history. Financing was smooth. These folks know performance cars."
+    "vehicle": "2019 Kia Optima EX",
+    "review": "Perfect family car! SQ Motors had the Optima I'd been hunting for months. The team was knowledgeable about the car's specs and history. Financing was smooth. These folks know reliable cars."
   },
   {
     "id": 8,
     "author": "Emily W.",
     "rating": 5,
     "date": "2024-11-28",
-    "vehicle": "2020 Ford Mustang Ecoboost",
-    "review": "Great selection of muscle cars at honest prices. I was on a tighter budget and they found me a well-maintained Ecoboost that runs like a dream. No pushy sales tactics—just genuine help. Thank you!"
+    "vehicle": "2016 Mazda6 Touring",
+    "review": "Great selection of reliable sedans at honest prices. I was on a tighter budget and they found me a well-maintained Mazda6 that runs like a dream. No pushy sales tactics—just genuine help. Thank you!"
   },
   {
     "id": 9,
     "author": "Chris B.",
     "rating": 5,
     "date": "2024-11-15",
-    "vehicle": "2022 Dodge Durango SRT",
-    "review": "Needed something that could fit the family but still had some power. The Durango SRT was the perfect fit. SQ Motors made the trade-in process painless and the numbers worked out great. Family approved!"
+    "vehicle": "2018 Toyota RAV4 LE",
+    "review": "Needed something that could fit the family but still had good fuel economy. The RAV4 was the perfect fit. SQ Motors made the trade-in process painless and the numbers worked out great. Family approved!"
   },
   {
     "id": 10,
     "author": "Lisa P.",
     "rating": 5,
     "date": "2024-11-08",
-    "vehicle": "2021 Chevrolet Camaro LT1",
+    "vehicle": "2017 Honda CR-V EX",
     "review": "Third car I've bought from SQ Motors over the years. That should tell you something. Consistently fair, consistently professional. They've earned my loyalty and I'll keep coming back."
   },
   {
@@ -84,39 +84,39 @@
     "author": "Kevin D.",
     "rating": 5,
     "date": "2024-10-30",
-    "vehicle": "2023 Ford Mustang Dark Horse",
-    "review": "Snagged a Dark Horse before they disappeared from the market. SQ Motors had it at a reasonable price when everyone else was gouging. The whole team understood what I was looking for. Top-notch experience."
+    "vehicle": "2016 Subaru Outback 2.5i",
+    "review": "Needed something reliable for my commute and occasional camping trips. The Outback was perfect. SQ Motors had it at a reasonable price when everyone else was gouging. The whole team understood what I was looking for. Top-notch experience."
   },
   {
     "id": 12,
     "author": "Michelle A.",
     "rating": 5,
     "date": "2024-10-20",
-    "vehicle": "2022 Dodge Challenger SXT",
-    "review": "Didn't think I could afford a Challenger, but SQ Motors worked with me on financing and found options I didn't know existed. Now I'm cruising in style. They really do want to put people in cars they love."
+    "vehicle": "2018 Ford Escape SE",
+    "review": "Didn't think I could afford a reliable SUV, but SQ Motors worked with me on financing and found options I didn't know existed. Now I'm driving a great Escape. They really do want to put people in cars they love."
   },
   {
     "id": 13,
     "author": "Jason L.",
     "rating": 5,
     "date": "2024-10-12",
-    "vehicle": "2021 Ford F-150 Raptor",
-    "review": "Came for a muscle car, left with a Raptor. The team helped me realize what would actually fit my needs—towing, hauling, and some weekend fun. No pressure, just good advice. The Raptor is a beast!"
+    "vehicle": "2017 Nissan Rogue SV",
+    "review": "Came for a sedan, left with a Rogue. The team helped me realize what would actually fit my needs—cargo space, family trips, and good MPG. No pressure, just good advice. The Rogue is perfect!"
   },
   {
     "id": 14,
     "author": "Nicole F.",
     "rating": 5,
     "date": "2024-10-01",
-    "vehicle": "2020 Dodge Charger SXT",
-    "review": "Moved to Springfield and needed a reliable car fast. SQ Motors had several options ready to go. Picked up a clean Charger in one afternoon. Friendly folks, clean facility, no drama. Exactly what I needed."
+    "vehicle": "2019 Hyundai Tucson SEL",
+    "review": "Moved to Springfield and needed a reliable car fast. SQ Motors had several options ready to go. Picked up a clean Tucson in one afternoon. Friendly folks, clean facility, no drama. Exactly what I needed."
   },
   {
     "id": 15,
     "author": "Brian T.",
     "rating": 5,
     "date": "2024-09-22",
-    "vehicle": "2023 Dodge Challenger Scat Pack",
-    "review": "The Scat Pack 392 is an absolute monster. SQ Motors had the exact color and options I wanted. Test drive was thorough, paperwork was quick. If you're in the market for American muscle, start here."
+    "vehicle": "2016 Volkswagen Jetta 1.4T",
+    "review": "The Jetta is an absolute commuter dream. SQ Motors had the exact color and options I wanted. Test drive was thorough, paperwork was quick. If you're in the market for a reliable daily driver, start here."
   }
 ]

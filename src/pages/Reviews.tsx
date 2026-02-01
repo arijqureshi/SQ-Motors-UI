@@ -122,7 +122,7 @@ const Reviews = () => {
                 ))}
               </div>
               <p className="text-center text-gray-500 text-sm mt-8">
-                Showing 5 randomly selected reviews from our customers. Refresh the page to see more!
+                Showing 6 randomly selected reviews from our customers. Refresh the page to see more!
               </p>
             </>
           )}
