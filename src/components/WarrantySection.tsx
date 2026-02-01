@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const WarrantySection = () => {
   return (
     <section id="warranty" className="bg-gray-300 py-16">
@@ -23,9 +25,9 @@ const WarrantySection = () => {
             <p className="text-gray-600 mb-4">
               Get pre-approved for financing in minutes. We work with multiple lenders to find you the best rates and terms for your budget.
             </p>
-            <button className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+            <Link to="/financing" className="text-blue-600 font-medium hover:text-blue-700 transition-colors inline-flex items-center">
               Learn More →
-            </button>
+            </Link>
           </div>
 
           {/* Trade-in Tips Card */}
@@ -39,9 +41,9 @@ const WarrantySection = () => {
             <p className="text-gray-600 mb-4">
               Maximize your trade-in value with our expert guidance. We offer fair market values and hassle-free trade-in processes.
             </p>
-            <button className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+            <Link to="/trade-in" className="text-blue-600 font-medium hover:text-blue-700 transition-colors inline-flex items-center">
               Learn More →
-            </button>
+            </Link>
           </div>
 
           {/* Contact Us Card */}
@@ -55,9 +57,9 @@ const WarrantySection = () => {
             <p className="text-gray-600 mb-4">
               Have questions? Our knowledgeable staff is here to help. Reach out via phone, email, or visit our showroom today.
             </p>
-            <a href="/contact" className="text-blue-600 font-medium hover:text-blue-700 transition-colors inline-flex items-center">
-                          Learn More <span aria-hidden="true">→</span>
-            </a>
+            <Link to="/contact" className="text-blue-600 font-medium hover:text-blue-700 transition-colors inline-flex items-center">
+              Learn More →
+            </Link>
           </div>
         </div>
       </div>

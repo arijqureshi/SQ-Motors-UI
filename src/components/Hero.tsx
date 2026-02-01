@@ -31,9 +31,9 @@ const Hero = () => {
                 <Link to="/inventory" className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
                   View Cars
                 </Link>
-                <button className="bg-gray-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors">
+                <Link to="/financing" className="bg-gray-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors">
                   Apply for Financing
-                </button>
+                </Link>
               </div>
 
               {/* Mobile CTA Buttons */}
