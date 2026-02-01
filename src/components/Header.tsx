@@ -23,6 +23,7 @@ const Header = () => {
             <a href="#about" className="text-white hover:text-red-600 transition-colors">About Us</a>
             <a href="#warranty" className="text-white hover:text-red-600 transition-colors">Warranty</a>
             <a href="#financing" className="text-white hover:text-red-600 transition-colors">Financing</a>
+            <Link to="/reviews" className="text-white hover:text-red-600 transition-colors">Reviews</Link>
             <Link to="/contact" className="text-white hover:text-red-600 transition-colors">Contact</Link>
           </nav>
 
@@ -66,6 +67,7 @@ const Header = () => {
               <a href="#about" className="text-white hover:text-red-600 transition-colors">About Us</a>
               <a href="#warranty" className="text-white hover:text-red-600 transition-colors">Warranty</a>
               <a href="#financing" className="text-white hover:text-red-600 transition-colors">Financing</a>
+              <Link to="/reviews" className="text-white hover:text-red-600 transition-colors">Reviews</Link>
               <Link to="/contact" className="text-white hover:text-red-600 transition-colors">Contact</Link>
             </nav>
           </div>
