@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import HighlightsSection from './HighlightsSection';
 
 const Hero = () => {
@@ -27,9 +28,9 @@ const Hero = () => {
               
               {/* Desktop CTA Buttons */}
               <div className="hidden md:flex space-x-4 mb-12">
-                <button className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                <Link to="/inventory" className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
                   View Cars
-                </button>
+                </Link>
                 <button className="bg-gray-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors">
                   Apply for Financing
                 </button>
@@ -40,9 +41,9 @@ const Hero = () => {
                 <button className="w-full bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors">
                   Schedule A Test Drive
                 </button>
-                <button className="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                <Link to="/inventory" className="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors text-center block">
                   View Available Cars
-                </button>
+                </Link>
               </div>
 
               {/* Mobile Feature Buttons */}

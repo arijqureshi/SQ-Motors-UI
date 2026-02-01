@@ -22,6 +22,7 @@ const Header = () => {
             <Link to="/home" className="text-white hover:text-red-600 transition-colors">Home</Link>
             <Link to="/about-us" className="text-white hover:text-red-600 transition-colors">About Us</Link>
             <a href="#financing" className="text-white hover:text-red-600 transition-colors">Financing</a>
+            <Link to="/inventory" className="text-white hover:text-red-600 transition-colors">Inventory</Link>
             <Link to="/reviews" className="text-white hover:text-red-600 transition-colors">Reviews</Link>
             <Link to="/contact" className="text-white hover:text-red-600 transition-colors">Contact</Link>
           </nav>
@@ -51,6 +52,7 @@ const Header = () => {
               <Link to="/home" className="text-white hover:text-red-600 transition-colors">Home</Link>
               <Link to="/about-us" className="text-white hover:text-red-600 transition-colors">About Us</Link>
               <a href="#financing" className="text-white hover:text-red-600 transition-colors">Financing</a>
+              <Link to="/inventory" className="text-white hover:text-red-600 transition-colors">Inventory</Link>
               <Link to="/reviews" className="text-white hover:text-red-600 transition-colors">Reviews</Link>
               <Link to="/contact" className="text-white hover:text-red-600 transition-colors">Contact</Link>
             </nav>
