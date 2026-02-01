@@ -66,7 +66,7 @@ const Reviews = () => {
     const loadReviews = async () => {
       const delay = Math.random() * 1500 + 500; // 0.5–2 seconds
       await new Promise((resolve) => setTimeout(resolve, delay));
-      setDisplayedReviews(shuffleAndPick(reviewsData as Review[], 5));
+      setDisplayedReviews(shuffleAndPick(reviewsData as Review[], 6));
       setIsLoading(false);
     };
     loadReviews();
