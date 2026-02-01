@@ -1,12 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
+
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header className="bg-gray-800 shadow-sm fixed top-0 left-0 right-0 z-50">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8" ref={mobileMenuRef}>
         <div className="flex items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 mr-auto">
@@ -49,12 +71,12 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-3">
-              <Link to="/home" className="text-white hover:text-red-600 transition-colors">Home</Link>
-              <Link to="/about-us" className="text-white hover:text-red-600 transition-colors">About Us</Link>
-              <Link to="/financing" className="text-white hover:text-red-600 transition-colors">Financing</Link>
-              <Link to="/inventory" className="text-white hover:text-red-600 transition-colors">Inventory</Link>
-              <Link to="/reviews" className="text-white hover:text-red-600 transition-colors">Reviews</Link>
-              <Link to="/contact" className="text-white hover:text-red-600 transition-colors">Contact</Link>
+              <Link to="/home" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Home</Link>
+              <Link to="/about-us" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>About Us</Link>
+              <Link to="/financing" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Financing</Link>
+              <Link to="/inventory" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Inventory</Link>
+              <Link to="/reviews" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Reviews</Link>
+              <Link to="/contact" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Contact</Link>
             </nav>
           </div>
         )}
