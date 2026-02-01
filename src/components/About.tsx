@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const About = () => {
   return (
     <section id="about" className="py-16 bg-gray-900">
@@ -16,9 +18,12 @@ const About = () => {
                 We believe in providing an exceptional car buying experience with transparency, honesty, and outstanding service. Every customer deserves to drive away happy in a vehicle they love.
               </p>
             </div>
-            <button className="mt-8 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+            <Link 
+              to="/about-us" 
+              className="mt-8 inline-block bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+            >
               Learn More
-            </button>
+            </Link>
           </div>
 
           {/* Right Content - Dealership Image Placeholder */}

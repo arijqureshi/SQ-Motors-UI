@@ -20,7 +20,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 ml-8">
             <Link to="/home" className="text-white hover:text-red-600 transition-colors">Home</Link>
-            <a href="#about" className="text-white hover:text-red-600 transition-colors">About Us</a>
+            <Link to="/about-us" className="text-white hover:text-red-600 transition-colors">About Us</Link>
             <a href="#warranty" className="text-white hover:text-red-600 transition-colors">Warranty</a>
             <a href="#financing" className="text-white hover:text-red-600 transition-colors">Financing</a>
             <Link to="/reviews" className="text-white hover:text-red-600 transition-colors">Reviews</Link>
@@ -64,7 +64,7 @@ const Header = () => {
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-3">
               <Link to="/home" className="text-white hover:text-red-600 transition-colors">Home</Link>
-              <a href="#about" className="text-white hover:text-red-600 transition-colors">About Us</a>
+              <Link to="/about-us" className="text-white hover:text-red-600 transition-colors">About Us</Link>
               <a href="#warranty" className="text-white hover:text-red-600 transition-colors">Warranty</a>
               <a href="#financing" className="text-white hover:text-red-600 transition-colors">Financing</a>
               <Link to="/reviews" className="text-white hover:text-red-600 transition-colors">Reviews</Link>
