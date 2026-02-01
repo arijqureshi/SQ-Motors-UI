@@ -38,9 +38,9 @@ const Hero = () => {
 
               {/* Mobile CTA Buttons */}
               <div className="md:hidden space-y-3 mb-8">
-                <button className="w-full bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors">
+                <Link to="/contact" className="w-full bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors text-center block">
                   Schedule A Test Drive
-                </button>
+                </Link>
                 <Link to="/inventory" className="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors text-center block">
                   View Available Cars
                 </Link>
@@ -48,12 +48,12 @@ const Hero = () => {
 
               {/* Mobile Feature Buttons */}
               <div className="md:hidden grid grid-cols-2 gap-3">
-                <button className="bg-gray-100 text-gray-800 px-4 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                <Link to="/about-us" className="bg-gray-100 text-gray-800 px-4 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors text-center block">
                   About Us
-                </button>
-                <button className="bg-gray-100 text-gray-800 px-4 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors">
-                  Our Warranty
-                </button>
+                </Link>
+                <Link to="/financing" className="bg-gray-100 text-gray-800 px-4 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors text-center block">
+                  Financing Options
+                </Link>
               </div>
             </div>
 
