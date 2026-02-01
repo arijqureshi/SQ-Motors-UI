@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import reviewsData from '../data/reviews.json';
 
 interface Review {
@@ -59,10 +59,18 @@ const ReviewCard = ({ review }: { review: Review }) => (
 );
 
 const Reviews = () => {
-  const displayedReviews = useMemo(
-    () => shuffleAndPick(reviewsData as Review[], 6),
-    []
-  );
+  const [isLoading, setIsLoading] = useState(true);
+  const [displayedReviews, setDisplayedReviews] = useState<Review[]>([]);
+
+  useEffect(() => {
+    const loadReviews = async () => {
+      const delay = Math.random() * 1500 + 500; // 0.5–2 seconds
+      await new Promise((resolve) => setTimeout(resolve, delay));
+      setDisplayedReviews(shuffleAndPick(reviewsData as Review[], 5));
+      setIsLoading(false);
+    };
+    loadReviews();
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -79,17 +87,45 @@ const Reviews = () => {
         </div>
       </section>
 
-      {/* Reviews grid */}
+      {/* Reviews grid or loading */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {displayedReviews.map((review) => (
-              <ReviewCard key={review.id} review={review} />
-            ))}
-          </div>
-          <p className="text-center text-gray-500 text-sm mt-8">
-            Showing 6 randomly selected reviews from our customers. Refresh the page to see more!
-          </p>
+          {isLoading ? (
+            <div className="flex flex-col items-center justify-center py-24">
+              <svg
+                className="w-12 h-12 text-red-600 animate-spin"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-label="Loading reviews"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                />
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                />
+              </svg>
+              <p className="mt-4 text-gray-500">Loading reviews...</p>
+            </div>
+          ) : (
+            <>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                {displayedReviews.map((review) => (
+                  <ReviewCard key={review.id} review={review} />
+                ))}
+              </div>
+              <p className="text-center text-gray-500 text-sm mt-8">
+                Showing 5 randomly selected reviews from our customers. Refresh the page to see more!
+              </p>
+            </>
+          )}
         </div>
       </section>
     </div>
