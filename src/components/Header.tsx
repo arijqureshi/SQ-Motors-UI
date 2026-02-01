@@ -32,11 +32,13 @@ const Header = () => {
         <div className="flex items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 mr-auto">
-            <img 
-              src="/src/assets/sq-motors-logo-transparent.png" 
-              alt="SQ Motors Logo" 
-              className="w-40 h-40 object-contain"
-            />
+            <Link to="/home" className="block">
+              <img 
+                src="/src/assets/sq-motors-logo-transparent.png" 
+                alt="SQ Motors Logo" 
+                className="w-40 h-40 object-contain"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
