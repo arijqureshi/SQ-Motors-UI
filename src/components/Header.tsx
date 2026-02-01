@@ -21,7 +21,7 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8 ml-8">
             <Link to="/home" className="text-white hover:text-red-600 transition-colors">Home</Link>
             <Link to="/about-us" className="text-white hover:text-red-600 transition-colors">About Us</Link>
-            <a href="#financing" className="text-white hover:text-red-600 transition-colors">Financing</a>
+            <Link to="/financing" className="text-white hover:text-red-600 transition-colors">Financing</Link>
             <Link to="/inventory" className="text-white hover:text-red-600 transition-colors">Inventory</Link>
             <Link to="/reviews" className="text-white hover:text-red-600 transition-colors">Reviews</Link>
             <Link to="/contact" className="text-white hover:text-red-600 transition-colors">Contact</Link>
@@ -51,7 +51,7 @@ const Header = () => {
             <nav className="flex flex-col space-y-3">
               <Link to="/home" className="text-white hover:text-red-600 transition-colors">Home</Link>
               <Link to="/about-us" className="text-white hover:text-red-600 transition-colors">About Us</Link>
-              <a href="#financing" className="text-white hover:text-red-600 transition-colors">Financing</a>
+              <Link to="/financing" className="text-white hover:text-red-600 transition-colors">Financing</Link>
               <Link to="/inventory" className="text-white hover:text-red-600 transition-colors">Inventory</Link>
               <Link to="/reviews" className="text-white hover:text-red-600 transition-colors">Reviews</Link>
               <Link to="/contact" className="text-white hover:text-red-600 transition-colors">Contact</Link>
