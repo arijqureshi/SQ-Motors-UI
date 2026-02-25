@@ -47,6 +47,7 @@ const Header = () => {
             <Link to="/about-us" className="text-white hover:text-red-600 transition-colors">About Us</Link>
             <Link to="/financing" className="text-white hover:text-red-600 transition-colors">Financing</Link>
             <Link to="/inventory" className="text-white hover:text-red-600 transition-colors">Inventory</Link>
+            <Link to="/warranty" className="text-white hover:text-red-600 transition-colors">Warranty</Link>
             <Link to="/reviews" className="text-white hover:text-red-600 transition-colors">Reviews</Link>
             <Link to="/contact" className="text-white hover:text-red-600 transition-colors">Contact</Link>
           </nav>
@@ -77,6 +78,7 @@ const Header = () => {
               <Link to="/about-us" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>About Us</Link>
               <Link to="/financing" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Financing</Link>
               <Link to="/inventory" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Inventory</Link>
+              <Link to="/warranty" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Warranty</Link>
               <Link to="/reviews" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Reviews</Link>
               <Link to="/contact" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Contact</Link>
             </nav>

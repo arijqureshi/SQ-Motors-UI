@@ -1,6 +1,6 @@
 export const COMPANY_INFO = {
   name: 'SQ Motors LLC',
-  facebook: 'https://www.facebook.com/sqmotors',
+  facebook: 'https://www.facebook.com/marketplace/profile/100005505010305',
   address: '1462 N National Ave, Springfield, MO 65802',
   phone: '(555) 123-4567',
   email: 'info@sqmotors.com',
