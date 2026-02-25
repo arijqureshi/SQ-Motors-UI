@@ -8,6 +8,8 @@ const Contact = () => {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -16,13 +18,46 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', phone: '', message: '' });
-    alert('Thank you for your message! We will get back to you soon.');
+
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const phoneValue = formData.phone.trim() || 'No phone provided';
+    const subject = `SQ Motors Contact | ${formData.name.trim()} | ${formData.email.trim()} | ${phoneValue}`;
+
+    const payload = new FormData();
+    payload.append('name', formData.name.trim());
+    payload.append('email', formData.email.trim());
+    payload.append('phone', phoneValue);
+    payload.append('message', formData.message.trim());
+    payload.append('_subject', subject);
+    payload.append('_replyto', formData.email.trim());
+
+    try {
+      const response = await fetch('https://formspree.io/f/mzdayjqv', {
+        method: 'POST',
+        body: payload,
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit contact form.');
+      }
+
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      setSubmitStatus('success');
+    } catch (error) {
+      console.error(error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -219,10 +254,23 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-red-600 text-white py-3 px-6 rounded-md hover:bg-red-700 transition-colors font-medium"
+                disabled={isSubmitting}
+                className="w-full bg-red-600 text-white py-3 px-6 rounded-md hover:bg-red-700 transition-colors font-medium disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
+
+              {submitStatus === 'success' && (
+                <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-md px-4 py-3">
+                  Thanks for your message. We&apos;ll get back to you soon.
+                </p>
+              )}
+
+              {submitStatus === 'error' && (
+                <p className="text-sm text-red-700 bg-red-50 border border-red-200 rounded-md px-4 py-3">
+                  Something went wrong sending your message. Please try again.
+                </p>
+              )}
             </form>
           </div>
         </div>
