@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-800 shadow-sm fixed top-0 left-0 right-0 z-50">
+    <header className="bg-gray-800 border-b-2 border-white shadow-sm fixed top-0 left-0 right-0 z-50">
       <div className="mx-auto px-4 sm:px-6 lg:px-8" ref={mobileMenuRef}>
         <div className="flex items-center h-20">
           {/* Logo */}

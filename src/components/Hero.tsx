@@ -4,18 +4,8 @@ import HighlightsSection from './HighlightsSection';
 const Hero = () => {
   return (
     <>
-      {/* Main Hero Section with Car Background */}
-      <section className="relative py-20 md:py-32">
-        <div className="absolute inset-0">
-          <img 
-            src="/src/assets/hellcat-hero.png" 
-            alt="Hero background" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gray-800 opacity-50"></div>
-        </div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gray-900 py-20 md:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left Content */}
             <div className="text-center md:text-left">
@@ -55,8 +45,33 @@ const Hero = () => {
                   Financing Options
                 </Link>
               </div>
+
+              {/* Mobile Video Placeholder */}
+              <div className="md:hidden mt-4">
+                <div className="bg-gray-800 border border-gray-700 rounded-xl aspect-video w-full flex items-center justify-center px-4">
+                  <div className="text-center">
+                    <svg className="w-12 h-12 mx-auto text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-5.197-3.03A1 1 0 008 9.03v5.94a1 1 0 001.555.832l5.197-3.03a1 1 0 000-1.664z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+                    </svg>
+                    <p className="text-gray-300 font-medium">Video Placeholder</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
+            {/* Desktop Video Placeholder */}
+            <div className="hidden md:block">
+              <div className="bg-gray-800 border border-gray-700 rounded-xl aspect-video w-full flex items-center justify-center px-4">
+                <div className="text-center">
+                  <svg className="w-16 h-16 mx-auto text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-5.197-3.03A1 1 0 008 9.03v5.94a1 1 0 001.555.832l5.197-3.03a1 1 0 000-1.664z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+                  </svg>
+                  <p className="text-gray-300 font-medium">Video Placeholder</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
