@@ -3,9 +3,15 @@ import { COMPANY_INFO } from '../constants';
 
 const Inventory = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
-      {/* Facebook component - clean, aesthetic */}
-      <div className="max-w-md mx-auto px-4 pt-12 pb-8">
+    <div className="min-h-screen bg-gray-100 px-4 py-16">
+      <div className="max-w-2xl mx-auto">
+        
+        {/* Facebook Component - Centered */}
+        <div className="text-center mb-8">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Browse Our Current Inventory</h3>
+          <p className="text-gray-600">See our latest arrivals and available vehicles on Facebook</p>
+        </div>
+        
         <a
           href={COMPANY_INFO.facebook}
           target="_blank"
@@ -43,28 +49,30 @@ const Inventory = () => {
             </div>
           </div>
         </a>
-      </div>
-
-      {/* Under construction - minimal, aesthetic */}
-      <section className="bg-gray-900 px-4 py-16 rounded-t-3xl">
-        <div className="max-w-lg mx-auto text-center">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gray-800 mb-6 border border-gray-700">
-            <svg className="w-10 h-10 text-red-500/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        
+        <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-100">
+          <div className="flex items-start gap-3">
+            <svg className="w-5 h-5 text-blue-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
+            <div>
+              <p className="text-sm font-medium text-blue-900">Why Facebook?</p>
+              <p className="text-xs text-blue-700 mt-1">
+                Our Facebook page is updated in real-time with our latest arrivals, pricing, and vehicle details. It's the best way to see what's currently available.
+              </p>
+            </div>
           </div>
-          <h2 className="text-xl font-semibold text-white mb-2">Inventory page coming soon</h2>
-          <p className="text-gray-400 text-sm mb-8">
-            We&apos;re building a full inventory experience. In the meantime, visit our Facebook page above.
-          </p>
+        </div>
+        
+        <div className="text-center mt-8">
           <Link
             to="/home"
-            className="text-sm font-medium text-red-500 hover:text-red-400 transition-colors"
+            className="inline-flex items-center text-sm font-medium text-red-600 hover:text-red-700 transition-colors"
           >
             ← Back to Home
           </Link>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
