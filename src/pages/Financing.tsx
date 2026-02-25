@@ -75,7 +75,7 @@ const Financing = () => {
                   Click below to start your journey toward driving away in your dream car!
                 </p>
                 <a
-                  href="https://placeholder-financing-application-link.com"
+                  href="https://sqmotors.startyourcreditapproval.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-8 py-4 bg-red-600 text-white text-lg font-semibold rounded-lg hover:bg-red-700 transition-colors shadow-lg"
