@@ -46,6 +46,7 @@ const Header = () => {
             <Link to="/home" className="text-white hover:text-red-600 transition-colors">Home</Link>
             <Link to="/about-us" className="text-white hover:text-red-600 transition-colors">About Us</Link>
             <Link to="/financing" className="text-white hover:text-red-600 transition-colors">Financing</Link>
+            <Link to="/trade-in" className="text-white hover:text-red-600 transition-colors">Trade In</Link>
             <Link to="/inventory" className="text-white hover:text-red-600 transition-colors">Inventory</Link>
             <Link to="/warranty" className="text-white hover:text-red-600 transition-colors">Warranty</Link>
             <Link to="/reviews" className="text-white hover:text-red-600 transition-colors">Reviews</Link>
@@ -53,12 +54,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <button className="p-2 text-white ml-4">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </button>
+          <div className="md:hidden flex items-center">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-white"
@@ -77,6 +73,7 @@ const Header = () => {
               <Link to="/home" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Home</Link>
               <Link to="/about-us" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>About Us</Link>
               <Link to="/financing" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Financing</Link>
+              <Link to="/trade-in" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Trade In</Link>
               <Link to="/inventory" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Inventory</Link>
               <Link to="/warranty" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Warranty</Link>
               <Link to="/reviews" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Reviews</Link>

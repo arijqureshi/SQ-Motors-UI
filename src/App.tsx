@@ -9,6 +9,7 @@ import Reviews from './pages/Reviews';
 import Inventory from './pages/Inventory';
 import Financing from './pages/Financing';
 import Warranty from './pages/Warranty';
+import TradeIn from './pages/TradeIn';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/inventory" element={<Inventory />} />
         <Route path="/warranty" element={<Warranty />} />
+        <Route path="/trade-in" element={<TradeIn />} />
       </Routes>
       <Footer />
     </div>

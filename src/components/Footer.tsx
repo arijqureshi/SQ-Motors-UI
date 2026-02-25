@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-5 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-4 gap-6 lg:gap-8">
           {/* Company Info */}
           <div className="md:col-span-2 lg:col-span-2">
             <div className="flex items-center mb-4">
@@ -39,18 +39,6 @@ const Footer = () => {
                 {COMPANY_INFO.email}
               </p>
             </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#inventory" className="text-gray-300 hover:text-white transition-colors">Inventory</a></li>
-              <li><a href="#financing" className="text-gray-300 hover:text-white transition-colors">Financing</a></li>
-              <li><a href="#warranty" className="text-gray-300 hover:text-white transition-colors">Warranty</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a></li>
-            </ul>
           </div>
 
           {/* Business Hours */}
