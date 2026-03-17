@@ -6,10 +6,10 @@ const WarrantySection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Every Vehicle Includes ASC Warranty
+            Buying Support & Protection Options
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Drive with confidence knowing your vehicle is protected by our comprehensive warranty program
+            From financing to trade-in guidance, we make the process simple. Ask about optional ASC warranty plans on eligible vehicles.
           </p>
         </div>
 

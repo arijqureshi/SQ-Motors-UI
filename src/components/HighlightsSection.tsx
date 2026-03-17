@@ -9,8 +9,8 @@ const HighlightsSection = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Warranty Included</h3>
-            <p className="text-gray-600 text-sm">All vehicles come with comprehensive ASC warranty coverage</p>
+            <h3 className="font-semibold text-gray-900 mb-2">Quality Checked</h3>
+            <p className="text-gray-600 text-sm">Each vehicle is reviewed through a comprehensive multi-point inspection</p>
           </div>
           <div className="text-center bg-gray-100 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">

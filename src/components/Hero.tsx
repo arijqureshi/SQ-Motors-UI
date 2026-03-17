@@ -13,7 +13,7 @@ const Hero = () => {
                 SQ MOTORS <span className="text-red-600">LLC</span>
               </h1>
               <p className="text-xl md:text-2xl text-red-600 mb-8">
-                Premium Used Cars with ASC Warranty
+                Premium Used Cars, Flexible Buying Options
               </p>
               
               {/* Desktop CTA Buttons */}

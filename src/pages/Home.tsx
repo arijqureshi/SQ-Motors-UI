@@ -1,7 +1,7 @@
 import Hero from '../components/Hero';
 import About from '../components/About';
-import WarrantySection from '../components/WarrantySection';
 import MobileFeatures from '../components/MobileFeatures';
+import WarrantySection from '../components/WarrantySection';
 
 const Home = () => {
   return (

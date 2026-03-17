@@ -16,7 +16,7 @@ const Footer = () => {
               <span className="text-xl font-semibold">{COMPANY_INFO.name}</span>
             </div>
             <p className="text-gray-300 mb-4">
-              Your trusted partner for quality pre-owned vehicles with comprehensive warranty coverage.
+              Your trusted partner for quality pre-owned vehicles and straightforward buying support.
             </p>
             <div className="space-y-2 text-gray-300">
               <p className="flex items-center">
