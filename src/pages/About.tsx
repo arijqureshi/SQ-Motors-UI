@@ -47,7 +47,7 @@ const About = () => {
         <div className="mb-16">
           <div className="border-b border-gray-200 mb-8">
             <nav className="flex space-x-8">
-              {['mission', 'values', 'team'].map((tab) => (
+              {['mission', 'values', 'process'].map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
@@ -57,7 +57,7 @@ const About = () => {
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                   }`}
                 >
-                  {tab === 'mission' ? 'Our Mission' : tab === 'values' ? 'Our Values' : 'Our Team'}
+                  {tab === 'mission' ? 'Our Mission' : tab === 'values' ? 'Our Values' : 'Our Process'}
                 </button>
               ))}
             </nav>
@@ -127,33 +127,31 @@ const About = () => {
               </div>
             )}
 
-            {activeTab === 'team' && (
+            {activeTab === 'process' && (
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Meet Our Team</h3>
-                <div className="grid md:grid-cols-2 gap-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Buying Process</h3>
+                <div className="grid md:grid-cols-2 gap-6">
                   {[
-                    { name: 'Saad Qureshi', role: 'Founder & CEO', description: 'With years of experience in the automotive industry, Saad leads our team with vision and expertise.', headshot: '/src/assets/team/saad-headshot.jpeg' },
-                    { name: 'Asad Ali', role: 'Sales Manager', description: 'Asad ensures every customer receives personalized attention and exceptional service.', headshot: '/src/assets/team/asad-headshot.jpg' },
-                  ].map((member, index) => (
-                    <div key={index} className="text-center">
-                      <div className="rounded-full w-32 h-32 mx-auto mb-4 overflow-hidden bg-gray-200">
-                        {member.headshot ? (
-                          <img 
-                            src={member.headshot} 
-                            alt={`${member.name} headshot`}
-                            className="w-full h-full object-cover"
-                          />
-                        ) : (
-                          <div className="w-full h-full flex items-center justify-center">
-                            <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                          </div>
-                        )}
-                      </div>
-                      <h4 className="text-lg font-semibold text-gray-900">{member.name}</h4>
-                      <p className="text-red-600 mb-2">{member.role}</p>
-                      <p className="text-gray-600 text-sm">{member.description}</p>
+                    {
+                      title: '1. Browse Inventory',
+                      description: 'Start with our latest available cars, trucks, and SUVs to find options that fit your needs and budget.'
+                    },
+                    {
+                      title: '2. Test Drive & Review',
+                      description: 'Take a closer look, test drive your top picks, and review key vehicle details with our team.'
+                    },
+                    {
+                      title: '3. Financing & Trade-In',
+                      description: 'Explore financing options and receive a fair trade-in evaluation if you are replacing your current vehicle.'
+                    },
+                    {
+                      title: '4. Finalize & Drive',
+                      description: 'Complete paperwork with clear terms and drive away with confidence in your purchase decision.'
+                    }
+                  ].map((step, index) => (
+                    <div key={index} className="bg-white rounded-lg border border-gray-200 p-6">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h4>
+                      <p className="text-gray-600 text-sm">{step.description}</p>
                     </div>
                   ))}
                 </div>
