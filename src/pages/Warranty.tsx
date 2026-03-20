@@ -1,4 +1,9 @@
+import { useState } from 'react';
+import inspectionVideo from '../assets/videos/SQ Motors Inspection.mp4';
+
 const Warranty = () => {
+  const [isMuted, setIsMuted] = useState(true);
+
   return (
     <div className="min-h-screen bg-white py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
@@ -11,7 +16,7 @@ const Warranty = () => {
         </div>
 
         {/* Hero Section */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
+        <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Prepare Each Vehicle</h2>
             <div className="space-y-4 text-gray-600">
@@ -27,13 +32,23 @@ const Warranty = () => {
             </div>
           </div>
           <div>
-            <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-              <div className="text-center">
-                <svg className="w-16 h-16 mx-auto text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                <p className="text-gray-500">Inspection Process Video</p>
-              </div>
+            <div className="relative bg-gray-200 rounded-lg aspect-video w-full overflow-hidden">
+              <video
+                className="w-full h-full object-cover"
+                src={inspectionVideo}
+                autoPlay
+                muted={isMuted}
+                loop
+                playsInline
+                preload="metadata"
+              />
+              <button
+                type="button"
+                onClick={() => setIsMuted((prev) => !prev)}
+                className="absolute bottom-3 right-3 bg-black/70 text-white text-sm font-medium px-3 py-2 rounded-md hover:bg-black/80 transition-colors"
+              >
+                {isMuted ? 'Tap for Sound' : 'Mute'}
+              </button>
             </div>
           </div>
         </div>

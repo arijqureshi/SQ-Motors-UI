@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import HighlightsSection from './HighlightsSection';
+import heroVideo from '../assets/videos/SQ Motors Hero.mp4';
 
 const Hero = () => {
+  const [isMuted, setIsMuted] = useState(true);
+
   return (
     <>
       <section className="bg-gray-900 py-20 md:py-32">
@@ -48,28 +52,46 @@ const Hero = () => {
 
               {/* Mobile Video Placeholder */}
               <div className="md:hidden mt-4">
-                <div className="bg-gray-800 border border-gray-700 rounded-xl aspect-video w-full flex items-center justify-center px-4">
-                  <div className="text-center">
-                    <svg className="w-12 h-12 mx-auto text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-5.197-3.03A1 1 0 008 9.03v5.94a1 1 0 001.555.832l5.197-3.03a1 1 0 000-1.664z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
-                    </svg>
-                    <p className="text-gray-300 font-medium">Video Placeholder</p>
-                  </div>
+                <div className="relative bg-gray-800 border border-gray-700 rounded-xl aspect-video w-full overflow-hidden">
+                  <video
+                    className="w-full h-full object-cover"
+                    src={heroVideo}
+                    autoPlay
+                    muted={isMuted}
+                    loop
+                    playsInline
+                    preload="metadata"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setIsMuted((prev) => !prev)}
+                    className="absolute bottom-3 right-3 bg-black/70 text-white text-xs font-medium px-3 py-1.5 rounded-md hover:bg-black/80 transition-colors"
+                  >
+                    {isMuted ? 'Tap for Sound' : 'Mute'}
+                  </button>
                 </div>
               </div>
             </div>
 
             {/* Desktop Video Placeholder */}
             <div className="hidden md:block">
-              <div className="bg-gray-800 border border-gray-700 rounded-xl aspect-video w-full flex items-center justify-center px-4">
-                <div className="text-center">
-                  <svg className="w-16 h-16 mx-auto text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-5.197-3.03A1 1 0 008 9.03v5.94a1 1 0 001.555.832l5.197-3.03a1 1 0 000-1.664z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
-                  </svg>
-                  <p className="text-gray-300 font-medium">Video Placeholder</p>
-                </div>
+              <div className="relative bg-gray-800 border border-gray-700 rounded-xl aspect-video w-full overflow-hidden">
+                <video
+                  className="w-full h-full object-cover"
+                  src={heroVideo}
+                  autoPlay
+                  muted={isMuted}
+                  loop
+                  playsInline
+                  preload="metadata"
+                />
+                <button
+                  type="button"
+                  onClick={() => setIsMuted((prev) => !prev)}
+                  className="absolute bottom-3 right-3 bg-black/70 text-white text-sm font-medium px-3 py-2 rounded-md hover:bg-black/80 transition-colors"
+                >
+                  {isMuted ? 'Tap for Sound' : 'Mute'}
+                </button>
               </div>
             </div>
           </div>
