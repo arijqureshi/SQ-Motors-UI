@@ -3,10 +3,10 @@ import reviewsData from '../data/reviews.json';
 
 interface Review {
   id: number;
-  author: string;
+  author: string | null;
   rating: number;
   date: string;
-  vehicle: string;
+  vehicle: string | null;
   review: string;
 }
 
@@ -27,6 +27,14 @@ function formatDate(dateStr: string) {
   });
 }
 
+function normalizeLabel(value: string | null | undefined, fallback: string) {
+  const cleaned = value?.replace(/\s+/g, ' ').trim();
+  if (!cleaned || cleaned.toLowerCase() === 'null') {
+    return fallback;
+  }
+  return cleaned;
+}
+
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex gap-0.5">
     {Array.from({ length: 5 }).map((_, i) => (
@@ -42,21 +50,26 @@ const StarRating = ({ rating }: { rating: number }) => (
   </div>
 );
 
-const ReviewCard = ({ review }: { review: Review }) => (
-  <article className="bg-gray-800 rounded-xl p-6 border border-gray-700/50 hover:border-gray-600/50 transition-colors">
-    <div className="flex items-center justify-between mb-4">
-      <StarRating rating={review.rating} />
-      <time className="text-sm text-gray-400" dateTime={review.date}>
-        {formatDate(review.date)}
-      </time>
-    </div>
-    <p className="text-gray-300 leading-relaxed mb-4">{review.review}</p>
-    <div className="pt-4 border-t border-gray-700">
-      <p className="font-semibold text-white">{review.author}</p>
-      <p className="text-sm text-red-400">{review.vehicle}</p>
-    </div>
-  </article>
-);
+const ReviewCard = ({ review }: { review: Review }) => {
+  const authorName = review.author;
+  const vehicleName = review.vehicle || ".";
+
+  return (
+    <article className="h-full flex flex-col bg-gray-800 rounded-xl p-6 border border-gray-700/50 hover:border-gray-600/50 transition-colors">
+      <div className="flex items-center justify-between mb-4">
+        <StarRating rating={review.rating} />
+        <time className="text-sm text-gray-400" dateTime={review.date}>
+          {formatDate(review.date)}
+        </time>
+      </div>
+      <p className="text-gray-300 leading-relaxed mb-4 flex-1">{review.review}</p>
+      <div className="mt-auto pt-4 border-t border-gray-700">
+        <p className="font-semibold text-white">{authorName}</p>
+        <p className="text-sm text-red-400">{vehicleName}</p>
+      </div>
+    </article>
+  );
+};
 
 const Reviews = () => {
   const [isLoading, setIsLoading] = useState(true);

@@ -1,122 +1,90 @@
 [
   {
     "id": 1,
-    "author": "James M.",
+    "author": "Lashaundra Weaver",
     "rating": 5,
-    "date": "2025-01-15",
-    "vehicle": "2018 Toyota Camry SE",
-    "review": "Best car buying experience I've ever had. The team at SQ Motors went above and beyond to find me the exact Camry I was looking for. No pressure, honest pricing, and they even helped me secure great financing. Highly recommend!"
+    "date": "2026-03-21",
+    "vehicle": "2017 Ford Explorer",
+    "review": "Great customer service. They were willing to stay after hours to help me find the perfect vehicle at a reasonable price. Very nice and friendly, and my car runs like a champ!"
   },
   {
     "id": 2,
-    "author": "Sarah T.",
+    "author": "Luke Phelps",
     "rating": 5,
-    "date": "2025-01-10",
-    "vehicle": "2017 Honda Civic EX",
-    "review": "I drove 3 hours to visit SQ Motors and it was absolutely worth it. The inventory was impressive and the staff knew their stuff. Got a fair price on my Civic and the whole process took less than 2 hours."
+    "date": "2026-03-14",
+    "vehicle": "2012 Acura TSX",
+    "review": "Bought my kid's first car here. Great to work with."
   },
   {
     "id": 3,
-    "author": "Mike R.",
+    "author": "Dean Cox",
     "rating": 5,
-    "date": "2025-01-05",
-    "vehicle": "2019 Nissan Altima SR",
-    "review": "Transparent, professional, and no hidden fees. They showed me the carfax upfront and were honest about the vehicle history. The warranty options they offered gave me real peace of mind. Will definitely be back for my next ride."
+    "date": "2026-03-07",
+    "vehicle": "2015 Ford Escape",
+    "review": "Very good place to buy from. Honest and fair pricing."
   },
   {
     "id": 4,
-    "author": "Jennifer L.",
+    "author": "Derek Moll",
     "rating": 5,
-    "date": "2024-12-28",
-    "vehicle": "2016 Ford Fusion SE",
-    "review": "As a first-time buyer, I was nervous about the process. The team at SQ Motors made everything simple and explained every step. They found me a Fusion in perfect condition within my budget. Couldn't be happier!"
-  },
-  {
-    "id": 5,
-    "author": "David K.",
-    "rating": 5,
-    "date": "2024-12-20",
-    "vehicle": "2018 Hyundai Elantra Limited",
-    "review": "Finally found an Elantra that wasn't marked up to the moon. SQ Motors has fair prices and a no-nonsense approach. The car was exactly as described. Five stars across the board."
+    "date": "2026-02-28",
+    "vehicle": "2007 Toyota Avalon",
+    "review": "Had a great time. They were very helpful the whole way through. The whole experience was fun and stress-free. I would recommend them to anyone in need of a good whip."
   },
   {
     "id": 6,
-    "author": "Amanda S.",
+    "author": "Randi Ford",
     "rating": 5,
-    "date": "2024-12-12",
-    "vehicle": "2017 Chevrolet Malibu LT",
-    "review": "I've bought from big dealerships before and hated the experience. SQ Motors is different—smaller, personal, and they actually listen to what you want. Got a beautiful Malibu and felt respected throughout."
+    "date": "2026-02-21",
+    "vehicle": "2013 Honda Civic EX-L",
+    "review": "Ali was great to buy from. Easy and fast process. We love our new car. Thank you!"
   },
   {
     "id": 7,
-    "author": "Robert H.",
+    "author": "Ahad Saqib",
     "rating": 5,
-    "date": "2024-12-05",
-    "vehicle": "2019 Kia Optima EX",
-    "review": "Perfect family car! SQ Motors had the Optima I'd been hunting for months. The team was knowledgeable about the car's specs and history. Financing was smooth. These folks know reliable cars."
+    "date": "2026-02-07",
+    "vehicle": "2024 BMW X4M",
+    "review": "Great dealer and a good person to deal with. Prompt, respectful, and we got an excellent deal. I would highly recommend SQ Motors to anyone wanting a great car."
   },
   {
     "id": 8,
-    "author": "Emily W.",
+    "author": "Seth Davidson",
     "rating": 5,
-    "date": "2024-11-28",
-    "vehicle": "2016 Mazda6 Touring",
-    "review": "Great selection of reliable sedans at honest prices. I was on a tighter budget and they found me a well-maintained Mazda6 that runs like a dream. No pushy sales tactics—just genuine help. Thank you!"
+    "date": "2025-11-08",
+    "vehicle": "2012 Toyota RAV4",
+    "review": "Solid place to buy a RAV4."
   },
   {
     "id": 9,
-    "author": "Chris B.",
+    "author": "Tyrone Ferrell",
     "rating": 5,
-    "date": "2024-11-15",
-    "vehicle": "2018 Toyota RAV4 LE",
-    "review": "Needed something that could fit the family but still had good fuel economy. The RAV4 was the perfect fit. SQ Motors made the trade-in process painless and the numbers worked out great. Family approved!"
+    "date": "2025-10-25",
+    "vehicle": null,
+    "review": "Cars are good and he works with you. Quick and easy. Come and go with your first car."
   },
   {
     "id": 10,
-    "author": "Lisa P.",
+    "author": "Patrick Espina",
     "rating": 5,
-    "date": "2024-11-08",
-    "vehicle": "2017 Honda CR-V EX",
-    "review": "Third car I've bought from SQ Motors over the years. That should tell you something. Consistently fair, consistently professional. They've earned my loyalty and I'll keep coming back."
+    "date": "2025-09-27",
+    "vehicle": null,
+    "review": "Ameer was polite, knowledgeable, and easy to work with. I don't think we were there for more than an hour and we were very happy with the process."
   },
   {
     "id": 11,
-    "author": "Kevin D.",
+    "author": "Cyndi Featherman",
     "rating": 5,
-    "date": "2024-10-30",
-    "vehicle": "2016 Subaru Outback 2.5i",
-    "review": "Needed something reliable for my commute and occasional camping trips. The Outback was perfect. SQ Motors had it at a reasonable price when everyone else was gouging. The whole team understood what I was looking for. Top-notch experience."
+    "date": "2025-09-20",
+    "vehicle": null,
+    "review": "Ameer and Ali were very friendly and accommodating. Love my car and would recommend them."
   },
   {
     "id": 12,
-    "author": "Michelle A.",
+    "author": "Abby May",
     "rating": 5,
-    "date": "2024-10-20",
-    "vehicle": "2018 Ford Escape SE",
-    "review": "Didn't think I could afford a reliable SUV, but SQ Motors worked with me on financing and found options I didn't know existed. Now I'm driving a great Escape. They really do want to put people in cars they love."
-  },
-  {
-    "id": 13,
-    "author": "Jason L.",
-    "rating": 5,
-    "date": "2024-10-12",
-    "vehicle": "2017 Nissan Rogue SV",
-    "review": "Came for a sedan, left with a Rogue. The team helped me realize what would actually fit my needs—cargo space, family trips, and good MPG. No pressure, just good advice. The Rogue is perfect!"
-  },
-  {
-    "id": 14,
-    "author": "Nicole F.",
-    "rating": 5,
-    "date": "2024-10-01",
-    "vehicle": "2019 Hyundai Tucson SEL",
-    "review": "Moved to Springfield and needed a reliable car fast. SQ Motors had several options ready to go. Picked up a clean Tucson in one afternoon. Friendly folks, clean facility, no drama. Exactly what I needed."
-  },
-  {
-    "id": 15,
-    "author": "Brian T.",
-    "rating": 5,
-    "date": "2024-09-22",
-    "vehicle": "2016 Volkswagen Jetta 1.4T",
-    "review": "The Jetta is an absolute commuter dream. SQ Motors had the exact color and options I wanted. Test drive was thorough, paperwork was quick. If you're in the market for a reliable daily driver, start here."
+    "date": "2025-08-30",
+    "vehicle": null,
+    "review": "This place is a gem and a find. Transparent and honest. When I had a question about the car's history, they were open and helpful."
   }
 ]
