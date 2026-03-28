@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import inspectionVideo from '../assets/videos/SQ Motors Inspection.mp4';
+import MuxVideo from '@mux/mux-video-react';
+
+const INSPECTION_PLAYBACK_ID = 'MrWt01JtYWT8Hr5lIY5Ao4lb36c9WtEgXIOwh1WpK7Dg';
 
 const Warranty = () => {
   const [isMuted, setIsMuted] = useState(true);
@@ -33,14 +35,17 @@ const Warranty = () => {
           </div>
           <div>
             <div className="relative bg-gray-200 rounded-lg aspect-video w-full overflow-hidden">
-              <video
-                className="w-full h-full object-cover"
-                src={inspectionVideo}
+              <MuxVideo
+                playbackId={INSPECTION_PLAYBACK_ID}
+                className="w-full h-full object-cover cursor-pointer"
+                style={{ width: '100%', height: '100%', border: 'none', aspectRatio: '16 / 9' }}
                 autoPlay
                 muted={isMuted}
                 loop
                 playsInline
+                controls={false}
                 preload="metadata"
+                onClick={() => setIsMuted((prev) => !prev)}
               />
               <button
                 type="button"

@@ -1,10 +1,29 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import MuxVideo from '@mux/mux-video-react';
 import { Link } from 'react-router-dom';
 import HighlightsSection from './HighlightsSection';
-import heroVideo from '../assets/videos/SQ Motors Hero.mp4';
+
+const HERO_PLAYBACK_ID = 'BGvyBfviTiqFgqXU02xpKiBOCkSZTouiyaGz9zc21pnk';
 
 const Hero = () => {
   const [isMuted, setIsMuted] = useState(true);
+  const [isDesktop, setIsDesktop] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(min-width: 768px)').matches;
+  });
+
+  useEffect(() => {
+    const media = window.matchMedia('(min-width: 768px)');
+    const handleChange = (event: MediaQueryListEvent) => {
+      setIsDesktop(event.matches);
+    };
+
+    setIsDesktop(media.matches);
+    media.addEventListener('change', handleChange);
+    return () => {
+      media.removeEventListener('change', handleChange);
+    };
+  }, []);
 
   return (
     <>
@@ -53,15 +72,20 @@ const Hero = () => {
               {/* Mobile Video Placeholder */}
               <div className="md:hidden mt-4">
                 <div className="relative bg-gray-800 border border-gray-700 rounded-xl aspect-video w-full overflow-hidden">
-                  <video
-                    className="w-full h-full object-cover"
-                    src={heroVideo}
-                    autoPlay
-                    muted={isMuted}
-                    loop
-                    playsInline
-                    preload="metadata"
-                  />
+                  {!isDesktop && (
+                    <MuxVideo
+                      playbackId={HERO_PLAYBACK_ID}
+                      className="w-full h-full cursor-pointer"
+                      style={{ width: '100%', height: '100%', border: 'none', aspectRatio: '16 / 9' }}
+                      autoPlay
+                      muted={isMuted}
+                      loop
+                      playsInline
+                      controls={false}
+                      preload="metadata"
+                      onClick={() => setIsMuted((prev) => !prev)}
+                    />
+                  )}
                   <button
                     type="button"
                     onClick={() => setIsMuted((prev) => !prev)}
@@ -76,15 +100,20 @@ const Hero = () => {
             {/* Desktop Video Placeholder */}
             <div className="hidden md:block">
               <div className="relative bg-gray-800 border border-gray-700 rounded-xl aspect-video w-full overflow-hidden">
-                <video
-                  className="w-full h-full object-cover"
-                  src={heroVideo}
-                  autoPlay
-                  muted={isMuted}
-                  loop
-                  playsInline
-                  preload="metadata"
-                />
+                {isDesktop && (
+                  <MuxVideo
+                    playbackId={HERO_PLAYBACK_ID}
+                    className="w-full h-full cursor-pointer"
+                    style={{ width: '100%', height: '100%', border: 'none', aspectRatio: '16 / 9' }}
+                    autoPlay
+                    muted={isMuted}
+                    loop
+                    playsInline
+                    controls={false}
+                    preload="metadata"
+                    onClick={() => setIsMuted((prev) => !prev)}
+                  />
+                )}
                 <button
                   type="button"
                   onClick={() => setIsMuted((prev) => !prev)}
