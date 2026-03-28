@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO } from '../constants';
+import logoTransparent from '../assets/sq-motors-logo-transparent.png';
 
 const Inventory = () => {
   return (
@@ -21,7 +22,7 @@ const Inventory = () => {
           <div className="flex items-center gap-4 p-5">
             <div className="w-14 h-14 rounded-full bg-gradient-to-br from-red-600 to-red-700 flex items-center justify-center flex-shrink-0">
               <img
-                src="/src/assets/sq-motors-logo-transparent.png"
+                src={logoTransparent}
                 alt="SQ Motors"
                 className="w-9 h-9 object-contain"
               />

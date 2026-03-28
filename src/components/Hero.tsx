@@ -61,10 +61,16 @@ const Hero = () => {
 
               {/* Mobile Feature Buttons */}
               <div className="md:hidden grid grid-cols-2 gap-3">
-                <Link to="/about-us" className="bg-gray-100 text-gray-800 px-4 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors text-center block">
+                <Link
+                  to="/about-us"
+                  className="bg-gray-100 text-gray-800 px-4 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors text-center flex items-center justify-center min-h-[52px] leading-tight"
+                >
                   About Us
                 </Link>
-                <Link to="/financing" className="bg-gray-100 text-gray-800 px-4 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors text-center block">
+                <Link
+                  to="/financing"
+                  className="bg-gray-100 text-gray-800 px-4 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors text-center flex items-center justify-center min-h-[52px] leading-tight"
+                >
                   Financing Options
                 </Link>
               </div>

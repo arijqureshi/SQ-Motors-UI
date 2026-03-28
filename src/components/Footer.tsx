@@ -1,4 +1,5 @@
 import { COMPANY_INFO } from '../constants';
+import logoTransparent from '../assets/sq-motors-logo-transparent.png';
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
           <div className="md:col-span-2 lg:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src="/src/assets/sq-motors-logo-transparent.png" 
+                src={logoTransparent}
                 alt="SQ Motors Logo" 
                 className="h-10 mr-3"
               />

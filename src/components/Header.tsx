@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import logoTransparent from '../assets/sq-motors-logo-transparent.png';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -34,7 +35,7 @@ const Header = () => {
           <div className="flex-shrink-0 mr-auto">
             <Link to="/home" className="block">
               <img 
-                src="/src/assets/sq-motors-logo-transparent.png" 
+                src={logoTransparent}
                 alt="SQ Motors Logo" 
                 className="w-40 h-40 object-contain"
               />
