@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO } from '../constants';
 import logoTransparent from '../assets/sq-motors-logo-transparent.png';
+import inventoryImage from '../assets/images/inventory.png';
 
 const Inventory = () => {
   return (
@@ -37,10 +38,13 @@ const Inventory = () => {
           </div>
           <div className="px-5 pb-5">
             <div className="rounded-xl bg-gray-50 border border-gray-100 overflow-hidden">
-              <div className="aspect-video bg-gray-100 flex items-center justify-center border-b border-gray-100">
-                <svg className="w-14 h-14 text-red-600/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
+              <div className="aspect-video border-b border-gray-100">
+                <img
+                  src={inventoryImage}
+                  alt="SQ Motors inventory preview"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
               <div className="p-4">
                 <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">facebook.com</p>
