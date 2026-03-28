@@ -140,7 +140,11 @@ const Contact = () => {
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-gray-900">Business Hours</h3>
                   <div className="text-gray-600 space-y-1">
-                    <p>Mon - Fri: {COMPANY_INFO.hours.monday}</p>
+                    <p>Monday: {COMPANY_INFO.hours.monday}</p>
+                    <p>Tuesday: {COMPANY_INFO.hours.tuesday}</p>
+                    <p>Wednesday: {COMPANY_INFO.hours.wednesday}</p>
+                    <p>Thursday: {COMPANY_INFO.hours.thursday}</p>
+                    <p>Friday: {COMPANY_INFO.hours.friday}</p>
                     <p>Saturday: {COMPANY_INFO.hours.saturday}</p>
                     <p>Sunday: {COMPANY_INFO.hours.sunday}</p>
                   </div>
@@ -158,9 +162,7 @@ const Contact = () => {
                   <h3 className="text-lg font-medium text-gray-900 mb-3">Follow Us</h3>
                   <div className="flex space-x-4">
                     <a
-                      href="https://facebook.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="/contact"
                       className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
                       aria-label="Facebook"
                     >
@@ -169,9 +171,7 @@ const Contact = () => {
                       </svg>
                     </a>
                     <a
-                      href="https://instagram.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="/contact"
                       className="w-10 h-10 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity"
                       aria-label="Instagram"
                     >

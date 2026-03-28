@@ -6,12 +6,12 @@ export const COMPANY_INFO = {
   email: 'sqmotorsllc98@gmail.com',
   website: 'www.sqmotors.com',
   hours: {
-    monday: '9:00 AM - 4:00 PM',
-    tuesday: '9:00 AM - 4:00 PM',
-    wednesday: '9:00 AM - 4:00 PM',
-    thursday: '12:00 PM - 5:00 PM',
-    friday: '9:00 AM - 5:00 PM',
-    saturday: '9:00 AM - 5:00 PM',
+    monday: '9 AM - 4 PM',
+    tuesday: '9 AM - 4 PM',
+    wednesday: '9 AM - 4 PM',
+    thursday: '12 PM - 5 PM',
+    friday: '9 AM - 5 PM',
+    saturday: '9 AM - 5 PM',
     sunday: 'Closed'
   }
 } as const;

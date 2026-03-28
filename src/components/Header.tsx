@@ -43,15 +43,15 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 ml-8">
-            <Link to="/home" className="text-white hover:text-red-600 transition-colors">Home</Link>
-            <Link to="/about-us" className="text-white hover:text-red-600 transition-colors">About Us</Link>
-            <Link to="/financing" className="text-white hover:text-red-600 transition-colors">Financing</Link>
-            <Link to="/trade-in" className="text-white hover:text-red-600 transition-colors">Trade In</Link>
-            <Link to="/inventory" className="text-white hover:text-red-600 transition-colors">Inventory</Link>
-            <Link to="/warranty" className="text-white hover:text-red-600 transition-colors">Inspections</Link>
-            <Link to="/reviews" className="text-white hover:text-red-600 transition-colors">Reviews</Link>
-            <Link to="/contact" className="text-white hover:text-red-600 transition-colors">Contact</Link>
+          <nav className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8 ml-6 lg:ml-8 text-sm lg:text-base">
+            <Link to="/home" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Home</Link>
+            <Link to="/about-us" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">About Us</Link>
+            <Link to="/financing" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Financing</Link>
+            <Link to="/trade-in" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Trade In</Link>
+            <Link to="/inventory" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Inventory</Link>
+            <Link to="/warranty" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Inspections</Link>
+            <Link to="/reviews" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Reviews</Link>
+            <Link to="/contact" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Contact</Link>
           </nav>
 
           {/* Mobile menu button */}
