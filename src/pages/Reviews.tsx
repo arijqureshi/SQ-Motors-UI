@@ -27,14 +27,6 @@ function formatDate(dateStr: string) {
   });
 }
 
-function normalizeLabel(value: string | null | undefined, fallback: string) {
-  const cleaned = value?.replace(/\s+/g, ' ').trim();
-  if (!cleaned || cleaned.toLowerCase() === 'null') {
-    return fallback;
-  }
-  return cleaned;
-}
-
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex gap-0.5">
     {Array.from({ length: 5 }).map((_, i) => (

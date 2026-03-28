@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import dealershipMain from '../assets/images/dealership-main.png';
+import dealershipMain1280 from '../assets/images/optimized/dealership-main-1280.jpg';
+import dealershipMain1920 from '../assets/images/optimized/dealership-main-1920.jpg';
 
 const About = () => {
   return (
@@ -31,10 +32,15 @@ const About = () => {
           <div>
             <div className="rounded-lg h-96 overflow-hidden">
               <img
-                src={dealershipMain}
+                src={dealershipMain1280}
+                srcSet={`${dealershipMain1280} 1280w, ${dealershipMain1920} 1920w`}
+                sizes="(min-width: 1024px) 42rem, (min-width: 768px) 50vw, 100vw"
+                width={1280}
+                height={960}
                 alt="SQ Motors dealership"
                 className="w-full h-full object-cover"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

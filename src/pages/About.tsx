@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { COMPANY_INFO } from '../constants';
-import dealershipAbout from '../assets/images/dealership-about.png';
+import dealershipAbout1280 from '../assets/images/optimized/dealership-about-1280.jpg';
+import dealershipAbout1920 from '../assets/images/optimized/dealership-about-1920.jpg';
 
 const About = () => {
   const [activeTab, setActiveTab] = useState('mission');
@@ -35,10 +36,16 @@ const About = () => {
           <div>
             <div className="rounded-lg h-96 overflow-hidden">
               <img
-                src={dealershipAbout}
+                src={dealershipAbout1280}
+                srcSet={`${dealershipAbout1280} 1280w, ${dealershipAbout1920} 1920w`}
+                sizes="(min-width: 1024px) 42rem, (min-width: 768px) 50vw, 100vw"
+                width={1280}
+                height={960}
                 alt="SQ Motors dealership lot"
                 className="w-full h-full object-cover"
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
           </div>

@@ -24,8 +24,8 @@ const MobileFeatures = () => {
                 </svg>
               </div>
               <div className="text-left">
-                <h3 className="font-semibold text-gray-900">Location & Hours</h3>
-                <p className="text-sm text-gray-600">Find us and our operating hours</p>
+                <h3 className="font-semibold text-gray-900">Our Story</h3>
+                <p className="text-sm text-gray-600">Find out about us and our mission</p>
               </div>
             </div>
             <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
