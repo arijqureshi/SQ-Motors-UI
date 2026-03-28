@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 
-const WarrantySection = () => {
+const InspectionsSection = () => {
   return (
-    <section id="warranty" className="bg-gray-300 py-16">
+    <section id="inspections" className="bg-gray-300 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Buying Support & Protection Options
+            Buying Support & Inspection Resources
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From financing to trade-in guidance, we make the process simple. Ask about optional ASC warranty plans on eligible vehicles.
+            From financing to multi-point inspections, we make the process simple and transparent.
           </p>
         </div>
 
@@ -30,18 +30,18 @@ const WarrantySection = () => {
             </Link>
           </div>
 
-          {/* Trade-in Tips Card */}
+          {/* Inspection Process Card */}
           <div className="bg-white rounded-lg shadow-xl p-6 hover:shadow-2xl transition-shadow">
             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
               <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Trade-in Tips</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Inspection Process</h3>
             <p className="text-gray-600 mb-4">
-              Maximize your trade-in value with our expert guidance. We offer fair market values and hassle-free trade-in processes.
+              Check out our multi-point inspection process and see how we prepare vehicles before they hit our lot.
             </p>
-            <Link to="/trade-in" className="text-blue-600 font-medium hover:text-blue-700 transition-colors inline-flex items-center">
+            <Link to="/inspections" className="text-blue-600 font-medium hover:text-blue-700 transition-colors inline-flex items-center">
               Learn More →
             </Link>
           </div>
@@ -67,4 +67,4 @@ const WarrantySection = () => {
   );
 };
 
-export default WarrantySection;
+export default InspectionsSection;

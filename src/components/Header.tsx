@@ -49,7 +49,7 @@ const Header = () => {
             <Link to="/financing" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Financing</Link>
             <Link to="/trade-in" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Trade In</Link>
             <Link to="/inventory" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Inventory</Link>
-            <Link to="/warranty" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Inspections</Link>
+            <Link to="/inspections" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Inspections</Link>
             <Link to="/reviews" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Reviews</Link>
             <Link to="/contact" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Contact</Link>
           </nav>
@@ -76,7 +76,7 @@ const Header = () => {
               <Link to="/financing" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Financing</Link>
               <Link to="/trade-in" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Trade In</Link>
               <Link to="/inventory" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Inventory</Link>
-              <Link to="/warranty" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Inspections</Link>
+              <Link to="/inspections" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Inspections</Link>
               <Link to="/reviews" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Reviews</Link>
               <Link to="/contact" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Contact</Link>
             </nav>

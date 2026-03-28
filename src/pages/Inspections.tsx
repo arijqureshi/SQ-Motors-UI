@@ -3,7 +3,7 @@ import MuxVideo from '@mux/mux-video-react';
 
 const INSPECTION_PLAYBACK_ID = 'MrWt01JtYWT8Hr5lIY5Ao4lb36c9WtEgXIOwh1WpK7Dg';
 
-const Warranty = () => {
+const Inspections = () => {
   const [isMuted, setIsMuted] = useState(true);
 
   return (
@@ -148,4 +148,4 @@ const Warranty = () => {
   );
 };
 
-export default Warranty;
+export default Inspections;
