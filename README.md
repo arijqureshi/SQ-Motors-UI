@@ -13,6 +13,22 @@ The React Compiler is enabled on this template. See [this documentation](https:/
 
 Note: This will impact Vite dev & build performances.
 
+## Inventory Feed (Google Sheets, No Backend)
+
+The inventory page can load Facebook embed posts from a public Google Sheet.
+
+1. Create a Google Sheet with headers:
+`iframe_src,height,title`
+2. Add one row per vehicle post:
+- `iframe_src`: either the Facebook plugin URL (`https://www.facebook.com/plugins/post.php?...`) or a full iframe snippet.
+- `height`: optional, defaults to `585`.
+- `title`: optional, used for iframe accessibility labels.
+3. Share the sheet publicly (Viewer) and publish/export as CSV.
+4. Set the environment variable in `.env`:
+`VITE_INVENTORY_SHEET_CSV_URL=https://docs.google.com/spreadsheets/d/<SHEET_ID>/export?format=csv&gid=<GID>`
+
+If the feed is unavailable, the app falls back to the built-in posts in `src/pages/Inventory.tsx`.
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:

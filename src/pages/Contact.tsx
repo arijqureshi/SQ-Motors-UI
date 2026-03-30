@@ -162,7 +162,9 @@ const Contact = () => {
                   <h3 className="text-lg font-medium text-gray-900 mb-3">Follow Us</h3>
                   <div className="flex space-x-4">
                     <a
-                      href="/contact"
+                      href={COMPANY_INFO.facebookPage}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
                       aria-label="Facebook"
                     >
