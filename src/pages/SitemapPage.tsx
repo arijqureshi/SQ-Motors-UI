@@ -47,13 +47,17 @@ const SitemapPage = () => {
         </section>
 
         <section className="rounded-lg border border-gray-200 p-6">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Machine-Readable Resources</h2>
-          <ul className="space-y-2 text-sm">
-            <li><a className="text-red-600 hover:text-red-700" href={canonicalUrlForPath('/sitemap.xml')}>XML Sitemap</a></li>
-            <li><a className="text-red-600 hover:text-red-700" href={canonicalUrlForPath('/llms.txt')}>LLMs.txt</a></li>
-            <li><a className="text-red-600 hover:text-red-700" href={canonicalUrlForPath('/.well-known/llms.txt')}>Well-Known LLMs.txt</a></li>
-            <li><a className="text-red-600 hover:text-red-700" href={canonicalUrlForPath('/llm/index.md')}>Markdown Index</a></li>
-          </ul>
+          <details>
+            <summary className="cursor-pointer text-sm font-semibold text-gray-900">
+              Technical Resources
+            </summary>
+            <ul className="space-y-2 text-sm mt-4">
+              <li><a className="text-red-600 hover:text-red-700" href={canonicalUrlForPath('/sitemap.xml')}>XML Sitemap</a></li>
+              <li><a className="text-red-600 hover:text-red-700" href={canonicalUrlForPath('/llms.txt')}>LLMs.txt</a></li>
+              <li><a className="text-red-600 hover:text-red-700" href={canonicalUrlForPath('/.well-known/llms.txt')}>Well-Known LLMs.txt</a></li>
+              <li><a className="text-red-600 hover:text-red-700" href={canonicalUrlForPath('/llm/index.md')}>Markdown Index</a></li>
+            </ul>
+          </details>
         </section>
       </div>
     </div>
