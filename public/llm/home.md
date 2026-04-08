@@ -1,4 +1,4 @@
-# Used Car Dealership in Springfield, MO
+# Used Cars in Springfield, MO
 
 Canonical URL: https://www.sqmotorsllc.com/
 

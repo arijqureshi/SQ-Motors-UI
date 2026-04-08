@@ -4,7 +4,7 @@ Canonical host: https://www.sqmotorsllc.com
 
 ## Core Mirrors
 
-- [Used Car Dealership in Springfield, MO](https://www.sqmotorsllc.com/llm/home.md)
+- [Used Cars in Springfield, MO](https://www.sqmotorsllc.com/llm/home.md)
 - [About SQ Motors | Used Car Dealership in Springfield, MO](https://www.sqmotorsllc.com/llm/about.md)
 - [Used Car Inventory in Springfield, MO](https://www.sqmotorsllc.com/llm/inventory.md)
 - [Used Car Financing in Springfield, MO](https://www.sqmotorsllc.com/llm/financing.md)
