@@ -1,13 +1,30 @@
 import { useState } from 'react';
 import { COMPANY_INFO } from '../constants';
 import financingOptionsImage from '../assets/images/financing-options.png';
+import Breadcrumbs from '../components/seo/Breadcrumbs';
+import FaqSection from '../components/seo/FaqSection';
+import SeoHead from '../components/seo/SeoHead';
+import ServiceAreaBlock from '../components/seo/ServiceAreaBlock';
+import { HOME_BREADCRUMB, getCorePageById } from '../config/seo';
+
+const financingPage = getCorePageById('financing');
 
 const Financing = () => {
   const [activeTab, setActiveTab] = useState('application');
 
   return (
     <div className="min-h-screen bg-white py-20 px-4 sm:px-6 lg:px-8">
+      <SeoHead
+        title={financingPage.title}
+        description={financingPage.description}
+        path={financingPage.path}
+        breadcrumbs={[HOME_BREADCRUMB, { label: 'Financing', path: financingPage.path }]}
+        faqItems={financingPage.faq ?? []}
+      />
+
       <div className="max-w-7xl mx-auto">
+        <Breadcrumbs items={[HOME_BREADCRUMB, { label: 'Financing', path: financingPage.path }]} />
+
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Financing Options</h1>
@@ -15,6 +32,8 @@ const Financing = () => {
             Flexible financing solutions to help you drive away in your dream car
           </p>
         </div>
+
+        <ServiceAreaBlock className="mb-12" />
 
         {/* Hero Section */}
         <div className="grid md:grid-cols-2 gap-12 mb-16">
@@ -212,6 +231,8 @@ const Financing = () => {
             </a>
           </div>
         </div>
+
+        <FaqSection title="Financing FAQ" items={financingPage.faq ?? []} className="mt-8" />
       </div>
     </div>
   );

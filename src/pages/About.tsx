@@ -2,13 +2,28 @@ import { useState } from 'react';
 import { COMPANY_INFO } from '../constants';
 import dealershipAbout1280 from '../assets/images/optimized/dealership-about-1280.jpg';
 import dealershipAbout1920 from '../assets/images/optimized/dealership-about-1920.jpg';
+import Breadcrumbs from '../components/seo/Breadcrumbs';
+import SeoHead from '../components/seo/SeoHead';
+import { HOME_BREADCRUMB, getCorePageById } from '../config/seo';
+
+const aboutPage = getCorePageById('about');
 
 const About = () => {
   const [activeTab, setActiveTab] = useState('mission');
 
   return (
     <div className="min-h-screen bg-white py-20 px-4 sm:px-6 lg:px-8">
+      <SeoHead
+        title={aboutPage.title}
+        description={aboutPage.description}
+        path={aboutPage.path}
+        breadcrumbs={[HOME_BREADCRUMB, { label: 'About', path: aboutPage.path }]}
+        includeBusinessSchema
+      />
+
       <div className="max-w-7xl mx-auto">
+        <Breadcrumbs items={[HOME_BREADCRUMB, { label: 'About', path: aboutPage.path }]} />
+
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">About SQ Motors</h1>

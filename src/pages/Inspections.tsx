@@ -1,14 +1,27 @@
 import { useState } from 'react';
 import MuxVideo from '@mux/mux-video-react';
+import Breadcrumbs from '../components/seo/Breadcrumbs';
+import SeoHead from '../components/seo/SeoHead';
+import { HOME_BREADCRUMB, getCorePageById } from '../config/seo';
 
 const INSPECTION_PLAYBACK_ID = 'MrWt01JtYWT8Hr5lIY5Ao4lb36c9WtEgXIOwh1WpK7Dg';
+const inspectionsPage = getCorePageById('inspections');
 
 const Inspections = () => {
   const [isMuted, setIsMuted] = useState(true);
 
   return (
     <div className="min-h-screen bg-white py-20 px-4 sm:px-6 lg:px-8">
+      <SeoHead
+        title={inspectionsPage.title}
+        description={inspectionsPage.description}
+        path={inspectionsPage.path}
+        breadcrumbs={[HOME_BREADCRUMB, { label: 'Inspections', path: inspectionsPage.path }]}
+      />
+
       <div className="max-w-4xl mx-auto">
+        <Breadcrumbs items={[HOME_BREADCRUMB, { label: 'Inspections', path: inspectionsPage.path }]} />
+
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Comprehensive Vehicle Inspection</h1>

@@ -33,7 +33,7 @@ const Header = () => {
         <div className="flex items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 mr-auto">
-            <Link to="/home" className="block">
+            <Link to="/" className="block">
               <img 
                 src={logoTransparent}
                 alt="SQ Motors Logo" 
@@ -44,10 +44,11 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8 ml-6 lg:ml-8 text-sm lg:text-base">
-            <Link to="/home" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Home</Link>
+            <Link to="/" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Home</Link>
             <Link to="/about-us" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">About Us</Link>
             <Link to="/financing" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Financing</Link>
             <Link to="/trade-in" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Trade In</Link>
+            <Link to="/locations/springfield-mo" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Locations</Link>
             <Link to="/inventory" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Inventory</Link>
             <Link to="/inspections" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Inspections</Link>
             <Link to="/reviews" className="text-white hover:text-red-600 transition-colors whitespace-nowrap">Reviews</Link>
@@ -71,10 +72,11 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-3">
-              <Link to="/home" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Home</Link>
+              <Link to="/" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Home</Link>
               <Link to="/about-us" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>About Us</Link>
               <Link to="/financing" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Financing</Link>
               <Link to="/trade-in" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Trade In</Link>
+              <Link to="/locations/springfield-mo" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Locations</Link>
               <Link to="/inventory" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Inventory</Link>
               <Link to="/inspections" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Inspections</Link>
               <Link to="/reviews" className="text-white hover:text-red-600 transition-colors" onClick={handleLinkClick}>Reviews</Link>

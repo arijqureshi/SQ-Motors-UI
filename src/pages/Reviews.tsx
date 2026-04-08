@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
 import reviewsData from '../data/reviews.json';
+import Breadcrumbs from '../components/seo/Breadcrumbs';
+import SeoHead from '../components/seo/SeoHead';
+import { HOME_BREADCRUMB, getCorePageById } from '../config/seo';
+
+const reviewsPage = getCorePageById('reviews');
 
 interface Review {
   id: number;
@@ -79,6 +84,17 @@ const Reviews = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SeoHead
+        title={reviewsPage.title}
+        description={reviewsPage.description}
+        path={reviewsPage.path}
+        breadcrumbs={[HOME_BREADCRUMB, { label: 'Reviews', path: reviewsPage.path }]}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+        <Breadcrumbs items={[HOME_BREADCRUMB, { label: 'Reviews', path: reviewsPage.path }]} />
+      </div>
+
       {/* Hero section */}
       <section className="bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

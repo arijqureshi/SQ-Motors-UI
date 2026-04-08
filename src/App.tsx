@@ -10,6 +10,9 @@ import Inventory from './pages/Inventory';
 import Financing from './pages/Financing';
 import Inspections from './pages/Inspections';
 import TradeIn from './pages/TradeIn';
+import Locations from './pages/Locations';
+import LocationPage from './pages/locations/LocationPage';
+import SitemapPage from './pages/SitemapPage';
 
 function App() {
   return (
@@ -18,12 +21,15 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/financing" element={<Financing />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/inventory" element={<Inventory />} />
+        <Route path="/sitemap" element={<SitemapPage />} />
+        <Route path="/locations" element={<Locations />} />
+        <Route path="/locations/:citySlug" element={<LocationPage />} />
         <Route path="/inspections" element={<Inspections />} />
         <Route path="/inspections/*" element={<Inspections />} />
         <Route path="/warranty" element={<Navigate to="/inspections" replace />} />

@@ -1,7 +1,22 @@
+import Breadcrumbs from '../components/seo/Breadcrumbs';
+import SeoHead from '../components/seo/SeoHead';
+import { HOME_BREADCRUMB, getCorePageById } from '../config/seo';
+
+const tradeInPage = getCorePageById('trade-in');
+
 const TradeIn = () => {
   return (
     <div className="min-h-screen bg-white py-20 px-4 sm:px-6 lg:px-8">
+      <SeoHead
+        title={tradeInPage.title}
+        description={tradeInPage.description}
+        path={tradeInPage.path}
+        breadcrumbs={[HOME_BREADCRUMB, { label: 'Trade-In', path: tradeInPage.path }]}
+      />
+
       <div className="max-w-5xl mx-auto">
+        <Breadcrumbs items={[HOME_BREADCRUMB, { label: 'Trade-In', path: tradeInPage.path }]} />
+
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Trade-In</h1>
           <p className="text-lg text-gray-600">

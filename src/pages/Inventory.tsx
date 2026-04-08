@@ -1,6 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Breadcrumbs from '../components/seo/Breadcrumbs';
+import FaqSection from '../components/seo/FaqSection';
+import InternalLinksPanel from '../components/seo/InternalLinksPanel';
+import LastUpdated from '../components/seo/LastUpdated';
+import SeoHead from '../components/seo/SeoHead';
+import ServiceAreaBlock from '../components/seo/ServiceAreaBlock';
 import { COMPANY_INFO } from '../constants';
+import { HOME_BREADCRUMB, getCorePageById, getLocalPageById } from '../config/seo';
 
 type InventoryPost = {
   src: string;
@@ -106,6 +113,9 @@ const parseInventoryPosts = (csvText: string): InventoryPost[] => {
     .filter((post): post is InventoryPost => post !== null);
 };
 
+const inventoryPage = getCorePageById('inventory');
+const springfieldPage = getLocalPageById('springfield');
+
 const Inventory = () => {
   const [posts, setPosts] = useState<InventoryPost[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -163,11 +173,29 @@ const Inventory = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 px-4 py-16">
+      <SeoHead
+        title={inventoryPage.title}
+        description={inventoryPage.description}
+        path={inventoryPage.path}
+        breadcrumbs={[HOME_BREADCRUMB, { label: 'Inventory', path: inventoryPage.path }]}
+        faqItems={inventoryPage.faq ?? []}
+      />
+
       <div className="max-w-7xl mx-auto">
+        <Breadcrumbs items={[HOME_BREADCRUMB, { label: 'Inventory', path: inventoryPage.path }]} />
+
+        <div className="rounded-lg border border-gray-200 bg-white p-6 mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-3">Recently Added Inventory</h1>
+          <p className="text-gray-700 mb-2">SQ Motors is a used car dealership serving the Springfield, Missouri area.</p>
+          <p className="text-gray-600">Browse our current listing feed and contact us directly to confirm availability.</p>
+        </div>
+
+        <ServiceAreaBlock className="mb-8" />
+
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
           <div>
             <p className="text-xs font-semibold text-red-600 tracking-widest uppercase mb-2">Inventory</p>
-            <h1 className="text-3xl font-bold text-gray-900">Recently Added</h1>
+            <h2 className="text-3xl font-bold text-gray-900">Current Listings Feed</h2>
           </div>
           <a
             href={COMPANY_INFO.facebookMarketplace}
@@ -179,7 +207,7 @@ const Inventory = () => {
           </a>
         </div>
 
-        <section>
+        <section className="mb-10">
           {isLoading && (
             <p className="text-center text-gray-600">Loading inventory...</p>
           )}
@@ -221,20 +249,43 @@ const Inventory = () => {
           )}
         </section>
 
-        <div className="mt-10 text-center">
-          <a
-            href={COMPANY_INFO.facebookMarketplace}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-red-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
-          >
-            View the Rest of Our Inventory
-          </a>
-        </div>
+        <section className="grid lg:grid-cols-2 gap-6 mb-8">
+          <article className="rounded-lg border border-gray-200 bg-white p-6">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-3">Types of Vehicles We Carry</h2>
+            <p className="text-gray-600">Our selection usually includes used cars, trucks, and SUVs chosen for reliability, value, and everyday driving in Southwest Missouri.</p>
+          </article>
+          <article className="rounded-lg border border-gray-200 bg-white p-6">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-3">How Often Inventory Updates</h2>
+            <p className="text-gray-600">Inventory updates regularly as units are added or sold. Online listings are refreshed based on the latest source data.</p>
+          </article>
+          <article className="rounded-lg border border-gray-200 bg-white p-6">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-3">What To Expect When Buying</h2>
+            <p className="text-gray-600">Compare options, ask for details, schedule a visit, and work directly with our team on next steps that fit your budget and timeline.</p>
+          </article>
+          <article className="rounded-lg border border-gray-200 bg-white p-6">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-3">Financing Options</h2>
+            <p className="text-gray-600">If you need financing, you can review options and apply online before finalizing your purchase in person.</p>
+          </article>
+        </section>
+
+        <LastUpdated contextLabel="Inventory" className="mb-8" />
+
+        <FaqSection title="Inventory FAQ" items={inventoryPage.faq ?? []} className="mb-8" />
+
+        <InternalLinksPanel
+          title="Related Pages"
+          links={[
+            { to: '/financing', label: 'Financing', description: 'Review requirements and apply online.' },
+            { to: '/trade-in', label: 'Trade-In', description: 'Share your current vehicle details for an evaluation.' },
+            { to: '/contact', label: 'Contact', description: 'Ask about listings and availability.' },
+            { to: springfieldPage.path, label: 'Springfield Service Hub', description: 'Explore local service-area content.' },
+          ]}
+          className="mb-8"
+        />
 
         <div className="text-center mt-8">
           <Link
-            to="/home"
+            to="/"
             className="inline-flex items-center text-sm font-medium text-red-600 hover:text-red-700 transition-colors"
           >
             ← Back to Home

@@ -1,5 +1,10 @@
 import { useState } from 'react';
 import { COMPANY_INFO } from '../constants';
+import Breadcrumbs from '../components/seo/Breadcrumbs';
+import SeoHead from '../components/seo/SeoHead';
+import { HOME_BREADCRUMB, getCorePageById } from '../config/seo';
+
+const contactPage = getCorePageById('contact');
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -62,7 +67,17 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-white py-20 px-4 sm:px-6 lg:px-8">
+      <SeoHead
+        title={contactPage.title}
+        description={contactPage.description}
+        path={contactPage.path}
+        breadcrumbs={[HOME_BREADCRUMB, { label: 'Contact', path: contactPage.path }]}
+        includeBusinessSchema
+      />
+
       <div className="max-w-7xl mx-auto">
+        <Breadcrumbs items={[HOME_BREADCRUMB, { label: 'Contact', path: contactPage.path }]} />
+
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
@@ -86,6 +101,14 @@ const Contact = () => {
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-gray-900">Address</h3>
                   <p className="text-gray-600">{COMPANY_INFO.address}</p>
+                  <a
+                    href={COMPANY_INFO.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-red-600 hover:text-red-700"
+                  >
+                    Open map directions
+                  </a>
                 </div>
               </div>
 

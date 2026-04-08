@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "seo:generate": "node scripts/generate-seo-assets.mjs",
+    "seo:validate": "node scripts/validate-seo-assets.mjs",
+    "build": "npm run seo:generate && npm run seo:validate && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

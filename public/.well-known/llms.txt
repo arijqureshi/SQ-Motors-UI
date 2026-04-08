@@ -1,0 +1,52 @@
+# SQ Motors LLM Discovery
+
+Canonical host: https://www.sqmotorsllc.com
+
+## Core Website Pages
+
+- Used Car Dealership in Springfield, MO: https://www.sqmotorsllc.com/
+- About SQ Motors | Used Car Dealership in Springfield, MO: https://www.sqmotorsllc.com/about-us
+- Used Car Inventory in Springfield, MO: https://www.sqmotorsllc.com/inventory
+- Used Car Financing in Springfield, MO: https://www.sqmotorsllc.com/financing
+- Trade-In Your Vehicle in Springfield, MO: https://www.sqmotorsllc.com/trade-in
+- Used Vehicle Inspection Process | SQ Motors Springfield, MO: https://www.sqmotorsllc.com/inspections
+- Customer Reviews | SQ Motors Springfield, MO: https://www.sqmotorsllc.com/reviews
+- Contact SQ Motors | Springfield, MO Used Car Dealership: https://www.sqmotorsllc.com/contact
+- Service Areas | SQ Motors Springfield, MO: https://www.sqmotorsllc.com/locations
+- Website Sitemap | SQ Motors: https://www.sqmotorsllc.com/sitemap
+
+## Springfield Hub
+
+- Springfield Service Area: https://www.sqmotorsllc.com/locations/springfield-mo
+
+## Service Area Pages
+
+- Springfield: https://www.sqmotorsllc.com/locations/springfield-mo
+- Ozark: https://www.sqmotorsllc.com/locations/ozark-mo
+- Nixa: https://www.sqmotorsllc.com/locations/nixa-mo
+- Republic: https://www.sqmotorsllc.com/locations/republic-mo
+- Battlefield: https://www.sqmotorsllc.com/locations/battlefield-mo
+- Rogersville: https://www.sqmotorsllc.com/locations/rogersville-mo
+
+## Markdown Mirrors
+
+- Used Car Dealership in Springfield, MO: https://www.sqmotorsllc.com/llm/home.md
+- About SQ Motors | Used Car Dealership in Springfield, MO: https://www.sqmotorsllc.com/llm/about.md
+- Used Car Inventory in Springfield, MO: https://www.sqmotorsllc.com/llm/inventory.md
+- Used Car Financing in Springfield, MO: https://www.sqmotorsllc.com/llm/financing.md
+- Trade-In Your Vehicle in Springfield, MO: https://www.sqmotorsllc.com/llm/trade-in.md
+- Used Vehicle Inspection Process | SQ Motors Springfield, MO: https://www.sqmotorsllc.com/llm/inspections.md
+- Customer Reviews | SQ Motors Springfield, MO: https://www.sqmotorsllc.com/llm/reviews.md
+- Contact SQ Motors | Springfield, MO Used Car Dealership: https://www.sqmotorsllc.com/llm/contact.md
+- Springfield: https://www.sqmotorsllc.com/llm/locations/springfield-mo.md
+- Ozark: https://www.sqmotorsllc.com/llm/locations/ozark-mo.md
+- Nixa: https://www.sqmotorsllc.com/llm/locations/nixa-mo.md
+- Republic: https://www.sqmotorsllc.com/llm/locations/republic-mo.md
+- Battlefield: https://www.sqmotorsllc.com/llm/locations/battlefield-mo.md
+- Rogersville: https://www.sqmotorsllc.com/llm/locations/rogersville-mo.md
+
+## Machine Readable Indexes
+
+- HTML sitemap: https://www.sqmotorsllc.com/sitemap
+- XML sitemap: https://www.sqmotorsllc.com/sitemap.xml
+- Markdown index: https://www.sqmotorsllc.com/llm/index.md

@@ -1,19 +1,28 @@
+import { BUSINESS, CANONICAL_HOST, FILTERED_SAME_AS_LINKS } from '../config/seo';
+
+const hourLabelFor = (dayOfWeek: string) =>
+  BUSINESS.hours.find((entry) => entry.dayOfWeek === dayOfWeek)?.label ?? 'Closed';
+
+const fallbackFacebook = 'https://www.facebook.com/people/SQ-Motors/61574504933855/';
+
 export const COMPANY_INFO = {
-  name: 'SQ Motors LLC',
-  facebook: 'https://www.facebook.com/people/SQ-Motors/61574504933855/',
-  facebookPage: 'https://www.facebook.com/people/SQ-Motors/61574504933855/',
+  name: BUSINESS.name,
+  facebook: FILTERED_SAME_AS_LINKS[0] ?? fallbackFacebook,
+  facebookPage: FILTERED_SAME_AS_LINKS[0] ?? fallbackFacebook,
   facebookMarketplace: 'https://www.facebook.com/marketplace/profile/100005505010305',
-  address: '1462 N National Ave, Springfield, MO 65802',
-  phone: '(417) 351-7456',
-  email: 'sqmotorsllc98@gmail.com',
-  website: 'www.sqmotors.com',
+  address: BUSINESS.address,
+  phone: BUSINESS.displayPhone,
+  phoneE164: BUSINESS.phone,
+  email: BUSINESS.email,
+  website: CANONICAL_HOST,
+  mapUrl: BUSINESS.mapUrl,
   hours: {
-    monday: '9 AM - 4 PM',
-    tuesday: '9 AM - 4 PM',
-    wednesday: '9 AM - 4 PM',
-    thursday: '12 PM - 5 PM',
-    friday: '9 AM - 5 PM',
-    saturday: '9 AM - 5 PM',
-    sunday: 'Closed'
-  }
+    monday: hourLabelFor('Monday'),
+    tuesday: hourLabelFor('Tuesday'),
+    wednesday: hourLabelFor('Wednesday'),
+    thursday: hourLabelFor('Thursday'),
+    friday: hourLabelFor('Friday'),
+    saturday: hourLabelFor('Saturday'),
+    sunday: hourLabelFor('Sunday'),
+  },
 } as const;

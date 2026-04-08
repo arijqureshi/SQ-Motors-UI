@@ -18,7 +18,6 @@ const Hero = () => {
       setIsDesktop(event.matches);
     };
 
-    setIsDesktop(media.matches);
     media.addEventListener('change', handleChange);
     return () => {
       media.removeEventListener('change', handleChange);

@@ -1,0 +1,439 @@
+{
+  "canonicalHost": "https://www.sqmotorsllc.com",
+  "siteName": "SQ Motors LLC",
+  "defaultOgImagePath": "/sq-motors-favicon.png",
+  "business": {
+    "name": "SQ Motors LLC",
+    "address": "1462 N National Ave, Springfield, MO 65802",
+    "streetAddress": "1462 N National Ave",
+    "addressLocality": "Springfield",
+    "addressRegion": "MO",
+    "postalCode": "65802",
+    "addressCountry": "US",
+    "phone": "+1-417-351-7456",
+    "displayPhone": "(417) 351-7456",
+    "email": "sqmotorsllc98@gmail.com",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=1462+N+National+Ave+Springfield+MO+65802",
+    "logoPath": "/sq-motors-favicon.png",
+    "hours": [
+      {
+        "dayOfWeek": "Monday",
+        "opens": "09:00",
+        "closes": "16:00",
+        "label": "9 AM - 4 PM"
+      },
+      {
+        "dayOfWeek": "Tuesday",
+        "opens": "09:00",
+        "closes": "16:00",
+        "label": "9 AM - 4 PM"
+      },
+      {
+        "dayOfWeek": "Wednesday",
+        "opens": "09:00",
+        "closes": "16:00",
+        "label": "9 AM - 4 PM"
+      },
+      {
+        "dayOfWeek": "Thursday",
+        "opens": "12:00",
+        "closes": "17:00",
+        "label": "12 PM - 5 PM"
+      },
+      {
+        "dayOfWeek": "Friday",
+        "opens": "09:00",
+        "closes": "17:00",
+        "label": "9 AM - 5 PM"
+      },
+      {
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "17:00",
+        "label": "9 AM - 5 PM"
+      },
+      {
+        "dayOfWeek": "Sunday",
+        "closed": true,
+        "label": "Closed"
+      }
+    ]
+  },
+  "businessTypeLine": "SQ Motors is a used car dealership serving the Springfield, Missouri area.",
+  "serviceAreaLine": "Serving Springfield, Ozark, Nixa, Republic, Battlefield, and Rogersville.",
+  "serviceAreas": [
+    "Springfield, MO",
+    "Ozark, MO",
+    "Nixa, MO",
+    "Republic, MO",
+    "Battlefield, MO",
+    "Rogersville, MO"
+  ],
+  "sameAs": {
+    "facebook": "https://www.facebook.com/people/SQ-Motors/61574504933855/",
+    "googleBusinessProfile": "",
+    "yelp": "",
+    "carsCom": "",
+    "carGurus": ""
+  },
+  "corePages": [
+    {
+      "id": "home",
+      "path": "/",
+      "title": "Used Car Dealership in Springfield, MO",
+      "description": "Shop quality used cars, financing options, trade-ins, and vehicle inspections at SQ Motors LLC in Springfield, Missouri.",
+      "summary": "SQ Motors LLC helps Springfield-area drivers shop reliable used cars, explore financing, and trade in current vehicles.",
+      "generateMarkdown": true,
+      "sections": [
+        {
+          "heading": "Why Springfield Drivers Choose SQ Motors",
+          "content": "We focus on quality pre-owned cars, straightforward financing conversations, and clear communication from first visit to delivery."
+        },
+        {
+          "heading": "How To Start",
+          "content": "Browse inventory online, contact our team with questions, and schedule an on-lot visit or test drive."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Where can I buy used cars in Springfield MO?",
+          "answer": "SQ Motors LLC in Springfield, Missouri offers a rotating selection of used cars, trucks, and SUVs."
+        },
+        {
+          "question": "Does SQ Motors offer financing?",
+          "answer": "Yes. SQ Motors offers financing options through lender partners and an online credit application."
+        },
+        {
+          "question": "Does SQ Motors take trade-ins?",
+          "answer": "Yes. SQ Motors accepts trade-ins and provides evaluations through the trade-in form and in-person visits."
+        },
+        {
+          "question": "What areas around Springfield does SQ Motors serve?",
+          "answer": "SQ Motors serves Springfield, Ozark, Nixa, Republic, Battlefield, and Rogersville."
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "path": "/about-us",
+      "title": "About SQ Motors | Used Car Dealership in Springfield, MO",
+      "description": "Learn about SQ Motors LLC, our mission, values, and customer-focused process for buying used vehicles in Springfield, Missouri.",
+      "summary": "Meet the SQ Motors team and learn how we support used car buyers in the Springfield area.",
+      "generateMarkdown": true,
+      "sections": [
+        {
+          "heading": "Our Mission",
+          "content": "Deliver transparent, helpful used car buying support with dependable vehicle options for local drivers."
+        },
+        {
+          "heading": "Our Process",
+          "content": "From inventory search to financing and trade-ins, we aim to keep each step clear and manageable."
+        }
+      ]
+    },
+    {
+      "id": "inventory",
+      "path": "/inventory",
+      "title": "Used Car Inventory in Springfield, MO",
+      "description": "Browse SQ Motors inventory updates, learn what vehicle types we carry, and view current listing sources in Springfield, Missouri.",
+      "summary": "View current SQ Motors inventory sources and learn how often listings refresh.",
+      "generateMarkdown": true,
+      "sections": [
+        {
+          "heading": "Types of Vehicles We Carry",
+          "content": "SQ Motors typically carries used cars, trucks, and SUVs selected for local commuting and family needs."
+        },
+        {
+          "heading": "How Often Inventory Updates",
+          "content": "Inventory updates regularly as vehicles are added and sold. The inventory page reflects current availability sources."
+        },
+        {
+          "heading": "What To Expect When Buying",
+          "content": "Compare options, ask for vehicle details, test drive available units, and work through transparent next steps with our team."
+        },
+        {
+          "heading": "Financing Options",
+          "content": "If needed, buyers can apply for financing through SQ Motors lender partners before finalizing a purchase."
+        }
+      ],
+      "faq": [
+        {
+          "question": "How can I browse current inventory?",
+          "answer": "Use the inventory page and linked listing sources to review currently available vehicles."
+        },
+        {
+          "question": "How often does inventory change?",
+          "answer": "Inventory changes frequently based on incoming vehicles and completed sales."
+        },
+        {
+          "question": "Can I ask questions about a specific listing?",
+          "answer": "Yes. Contact SQ Motors directly by phone or through the contact form for listing questions."
+        }
+      ]
+    },
+    {
+      "id": "financing",
+      "path": "/financing",
+      "title": "Used Car Financing in Springfield, MO",
+      "description": "Explore SQ Motors financing options, requirements, and online credit application support for used car buyers in Springfield, Missouri.",
+      "summary": "Review financing requirements and start a secure online application with SQ Motors.",
+      "generateMarkdown": true,
+      "sections": [
+        {
+          "heading": "Flexible Financing Support",
+          "content": "We work with multiple lenders and help buyers understand options that match their goals and budget."
+        },
+        {
+          "heading": "What You Need To Apply",
+          "content": "Most applications require basic residence, income, and identification details."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Does SQ Motors offer financing for used cars?",
+          "answer": "Yes. SQ Motors offers financing support and an online application process."
+        },
+        {
+          "question": "What information is needed for financing?",
+          "answer": "Typical requirements include residence details, income information, and SSN or ITIN."
+        }
+      ]
+    },
+    {
+      "id": "trade-in",
+      "path": "/trade-in",
+      "title": "Trade-In Your Vehicle in Springfield, MO",
+      "description": "Submit your trade-in details to SQ Motors in Springfield, Missouri and receive a fair evaluation for your current vehicle.",
+      "summary": "Use the SQ Motors trade-in form to start your vehicle evaluation.",
+      "generateMarkdown": true,
+      "sections": [
+        {
+          "heading": "How Trade-Ins Work",
+          "content": "Share details about your current vehicle and our team will review condition and market factors to provide guidance."
+        },
+        {
+          "heading": "Next Steps",
+          "content": "After submitting, our team follows up to discuss options and potential inventory matches."
+        }
+      ]
+    },
+    {
+      "id": "inspections",
+      "path": "/inspections",
+      "title": "Used Vehicle Inspection Process | SQ Motors Springfield, MO",
+      "description": "Learn how SQ Motors performs multi-point used vehicle inspections before listing inventory in Springfield, Missouri.",
+      "summary": "SQ Motors follows a multi-point inspection process before vehicles reach the lot.",
+      "generateMarkdown": true,
+      "sections": [
+        {
+          "heading": "Core Inspection Categories",
+          "content": "Inspections review key systems including engine, transmission, braking, electrical, steering, and safety-related components."
+        },
+        {
+          "heading": "Buyer Confidence",
+          "content": "Inspection transparency helps buyers understand condition and make informed decisions."
+        }
+      ]
+    },
+    {
+      "id": "reviews",
+      "path": "/reviews",
+      "title": "Customer Reviews | SQ Motors Springfield, MO",
+      "description": "Read customer feedback about buying used vehicles from SQ Motors in Springfield, Missouri.",
+      "summary": "Read real customer feedback and experiences with SQ Motors.",
+      "generateMarkdown": true,
+      "sections": [
+        {
+          "heading": "What Customers Mention",
+          "content": "Customers often mention communication, financing support, and straightforward help during their purchase process."
+        },
+        {
+          "heading": "See More Feedback",
+          "content": "The reviews page highlights selected testimonials from SQ Motors customers."
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "path": "/contact",
+      "title": "Contact SQ Motors | Springfield, MO Used Car Dealership",
+      "description": "Contact SQ Motors LLC in Springfield, Missouri for inventory questions, financing help, trade-ins, and dealership hours.",
+      "summary": "Get in touch with SQ Motors by phone, email, or contact form.",
+      "generateMarkdown": true,
+      "sections": [
+        {
+          "heading": "Contact Methods",
+          "content": "Call, email, or use the contact form for inventory and financing questions."
+        },
+        {
+          "heading": "Visit Information",
+          "content": "SQ Motors is located on North National Avenue in Springfield, Missouri with posted business hours."
+        }
+      ]
+    },
+    {
+      "id": "locations",
+      "path": "/locations",
+      "title": "Service Areas | SQ Motors Springfield, MO",
+      "description": "Explore cities served by SQ Motors including Springfield, Ozark, Nixa, Republic, Battlefield, and Rogersville.",
+      "summary": "Service-area index for Springfield metro communities served by SQ Motors.",
+      "generateMarkdown": false,
+      "sections": [
+        {
+          "heading": "Communities We Serve",
+          "content": "SQ Motors serves Springfield and nearby metro communities with used car inventory, financing, and trade-in support."
+        }
+      ]
+    },
+    {
+      "id": "sitemap",
+      "path": "/sitemap",
+      "title": "Website Sitemap | SQ Motors",
+      "description": "Browse all SQ Motors pages, service area content, and machine-readable resources from one place.",
+      "summary": "Human-readable sitemap of SQ Motors pages and service-area resources.",
+      "generateMarkdown": false,
+      "sections": [
+        {
+          "heading": "Navigate SQ Motors",
+          "content": "This page links to core pages, service-area pages, and machine-readable content."
+        }
+      ]
+    }
+  ],
+  "localPages": [
+    {
+      "id": "springfield",
+      "city": "Springfield",
+      "path": "/locations/springfield-mo",
+      "title": "Used Car Dealership Serving Springfield, MO",
+      "description": "SQ Motors helps Springfield drivers find quality used cars, financing options, trade-in support, and clear buying guidance.",
+      "summary": "Springfield service-area hub with inventory, financing, and contact pathways.",
+      "generateMarkdown": true,
+      "nearby": ["ozark", "nixa", "republic"],
+      "sections": [
+        {
+          "heading": "Why Springfield Buyers Choose SQ Motors",
+          "content": "Springfield shoppers choose SQ Motors for quality used inventory, clear communication, and practical financing support."
+        },
+        {
+          "heading": "How To Shop From Springfield",
+          "content": "Start online, ask questions by phone or message, then visit the lot to review and test drive available vehicles."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Where can I buy used cars near Springfield MO?",
+          "answer": "SQ Motors LLC is a used car dealership in Springfield, Missouri serving local and nearby communities."
+        },
+        {
+          "question": "Can Springfield buyers apply for financing?",
+          "answer": "Yes. SQ Motors offers financing options and an online application process."
+        },
+        {
+          "question": "Does SQ Motors serve nearby towns?",
+          "answer": "Yes. SQ Motors serves Springfield, Ozark, Nixa, Republic, Battlefield, and Rogersville."
+        }
+      ]
+    },
+    {
+      "id": "ozark",
+      "city": "Ozark",
+      "path": "/locations/ozark-mo",
+      "title": "Used Car Dealership Near Ozark, MO | SQ Motors",
+      "description": "Drivers in Ozark, Missouri can shop used cars, financing, and trade-in support with SQ Motors in nearby Springfield.",
+      "summary": "Used car shopping support for Ozark drivers through SQ Motors.",
+      "generateMarkdown": true,
+      "nearby": ["springfield", "nixa", "battlefield"],
+      "sections": [
+        {
+          "heading": "For Ozark Drivers",
+          "content": "Ozark customers can compare practical used vehicles and work with our team on budget-friendly purchasing steps."
+        },
+        {
+          "heading": "Financing and Trade-In Access",
+          "content": "Apply for financing online, discuss trade-ins, and confirm availability before visiting our Springfield lot."
+        }
+      ]
+    },
+    {
+      "id": "nixa",
+      "city": "Nixa",
+      "path": "/locations/nixa-mo",
+      "title": "Used Car Dealership Near Nixa, MO | SQ Motors",
+      "description": "SQ Motors serves Nixa, Missouri drivers with used car inventory access, financing guidance, and trade-in options.",
+      "summary": "Used vehicle shopping and financing support for drivers in Nixa.",
+      "generateMarkdown": true,
+      "nearby": ["springfield", "ozark", "republic"],
+      "sections": [
+        {
+          "heading": "For Nixa Commutes and Family Needs",
+          "content": "Nixa shoppers can find a mix of used cars, trucks, and SUVs suited for daily driving and weekend travel."
+        },
+        {
+          "heading": "Straightforward Buying Process",
+          "content": "Our team helps Nixa buyers move from browsing to financing and final paperwork with clear expectations."
+        }
+      ]
+    },
+    {
+      "id": "republic",
+      "city": "Republic",
+      "path": "/locations/republic-mo",
+      "title": "Used Car Dealership Near Republic, MO | SQ Motors",
+      "description": "Republic, Missouri shoppers can browse used inventory and financing options at SQ Motors in Springfield.",
+      "summary": "Used car dealership support for Republic drivers.",
+      "generateMarkdown": true,
+      "nearby": ["springfield", "battlefield", "rogersville"],
+      "sections": [
+        {
+          "heading": "For Republic Shoppers",
+          "content": "Republic buyers can review current inventory sources and connect with us before making a trip to the dealership."
+        },
+        {
+          "heading": "Confidence Before You Visit",
+          "content": "We can help confirm options, financing steps, and trade-in details so your dealership visit is productive."
+        }
+      ]
+    },
+    {
+      "id": "battlefield",
+      "city": "Battlefield",
+      "path": "/locations/battlefield-mo",
+      "title": "Used Car Dealership Near Battlefield, MO | SQ Motors",
+      "description": "SQ Motors serves Battlefield, Missouri with used car inventory access, financing, and trade-in guidance from Springfield.",
+      "summary": "Used car purchase support for Battlefield drivers.",
+      "generateMarkdown": true,
+      "nearby": ["springfield", "ozark", "republic"],
+      "sections": [
+        {
+          "heading": "For Battlefield Drivers",
+          "content": "Battlefield customers can access our inventory and contact support to narrow options that fit monthly goals."
+        },
+        {
+          "heading": "Helpful Next Steps",
+          "content": "Use our financing and trade-in pathways to prepare before selecting a vehicle in person."
+        }
+      ]
+    },
+    {
+      "id": "rogersville",
+      "city": "Rogersville",
+      "path": "/locations/rogersville-mo",
+      "title": "Used Car Dealership Near Rogersville, MO | SQ Motors",
+      "description": "Rogersville, Missouri drivers can work with SQ Motors in Springfield for used vehicle shopping, financing, and trade-in help.",
+      "summary": "Used inventory and financing support for Rogersville shoppers.",
+      "generateMarkdown": true,
+      "nearby": ["springfield", "republic", "nixa"],
+      "sections": [
+        {
+          "heading": "For Rogersville Buyers",
+          "content": "Rogersville shoppers can start with online inventory, then connect with our team to plan an efficient visit."
+        },
+        {
+          "heading": "Support Beyond Browsing",
+          "content": "We help with financing options, trade-in evaluations, and clear purchase expectations from first contact onward."
+        }
+      ]
+    }
+  ]
+}
