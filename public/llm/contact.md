@@ -2,7 +2,7 @@
 
 Canonical URL: https://www.sqmotorsllc.com/contact
 
-Last updated: April 8, 2026
+Last updated: April 7, 2026
 
 ## Summary
 

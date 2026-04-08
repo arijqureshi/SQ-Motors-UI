@@ -135,8 +135,8 @@
       "id": "inventory",
       "path": "/inventory",
       "title": "Used Car Inventory in Springfield, MO",
-      "description": "Browse SQ Motors inventory updates, learn what vehicle types we carry, and view current listing sources in Springfield, Missouri.",
-      "summary": "View current SQ Motors inventory sources and learn how often listings refresh.",
+      "description": "Browse SQ Motors inventory updates on Facebook, learn what vehicle types we carry, and contact our team in Springfield, Missouri.",
+      "summary": "View current SQ Motors inventory on Facebook and learn how often listings refresh.",
       "generateMarkdown": true,
       "sections": [
         {
@@ -145,7 +145,7 @@
         },
         {
           "heading": "How Often Inventory Updates",
-          "content": "Inventory updates regularly as vehicles are added and sold. The inventory page reflects current availability sources."
+          "content": "Inventory updates regularly as vehicles are added and sold. Our Facebook inventory page reflects current availability."
         },
         {
           "heading": "What To Expect When Buying",
@@ -159,7 +159,7 @@
       "faq": [
         {
           "question": "How can I browse current inventory?",
-          "answer": "Use the inventory page and linked listing sources to review currently available vehicles."
+          "answer": "Use the inventory page to open SQ Motors Facebook inventory listings and review currently available vehicles."
         },
         {
           "question": "How often does inventory change?",

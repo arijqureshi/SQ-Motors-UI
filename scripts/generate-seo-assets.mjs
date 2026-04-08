@@ -13,16 +13,38 @@ import {
   readSeoConfig,
 } from './seo-shared.mjs';
 
+const CENTRAL_TIMEZONE = 'America/Chicago';
+
 const now = new Date();
-const isoBuildDate = now.toISOString().slice(0, 10);
+
+const toCentralIsoDate = (date) => {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: CENTRAL_TIMEZONE,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(date);
+
+  const year = parts.find((part) => part.type === 'year')?.value;
+  const month = parts.find((part) => part.type === 'month')?.value;
+  const day = parts.find((part) => part.type === 'day')?.value;
+
+  if (!year || !month || !day) {
+    throw new Error('Failed to compute Central Time build date');
+  }
+
+  return `${year}-${month}-${day}`;
+};
+
+const isoBuildDate = toCentralIsoDate(now);
 
 const formatReadableDate = (isoDate) =>
   new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-    timeZone: 'UTC',
-  }).format(new Date(`${isoDate}T00:00:00Z`));
+    timeZone: CENTRAL_TIMEZONE,
+  }).format(new Date(`${isoDate}T12:00:00Z`));
 
 const markdownForPage = ({ page, canonicalUrl, config, readableDate, isLocal }) => {
   const nearbySection = isLocal
@@ -182,7 +204,7 @@ const sitemapXml = ({ config, pages, markdownCorePages, markdownLocalPages, last
 
 const robotsText = (config) => `User-agent: *\nAllow: /\n\nSitemap: ${canonicalUrlForPath(config.canonicalHost, '/sitemap.xml')}\n`;
 
-const buildFileText = `export const SEO_BUILD_ISO_DATE = '${isoBuildDate}';\n\nexport const SEO_BUILD_READABLE_DATE = new Intl.DateTimeFormat('en-US', {\n  year: 'numeric',\n  month: 'long',\n  day: 'numeric',\n}).format(new Date(\`${isoBuildDate}T00:00:00Z\`));\n`;
+const buildFileText = `export const SEO_BUILD_ISO_DATE = '${isoBuildDate}';\n\nexport const SEO_BUILD_READABLE_DATE = new Intl.DateTimeFormat('en-US', {\n  year: 'numeric',\n  month: 'long',\n  day: 'numeric',\n  timeZone: '${CENTRAL_TIMEZONE}',\n}).format(new Date(\`${isoBuildDate}T12:00:00Z\`));\n`;
 
 const generate = async () => {
   const config = await readSeoConfig();

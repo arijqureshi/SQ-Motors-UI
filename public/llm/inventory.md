@@ -2,11 +2,11 @@
 
 Canonical URL: https://www.sqmotorsllc.com/inventory
 
-Last updated: April 8, 2026
+Last updated: April 7, 2026
 
 ## Summary
 
-View current SQ Motors inventory sources and learn how often listings refresh.
+View current SQ Motors inventory on Facebook and learn how often listings refresh.
 
 ## Key Business Facts
 
@@ -23,7 +23,7 @@ SQ Motors typically carries used cars, trucks, and SUVs selected for local commu
 
 ## How Often Inventory Updates
 
-Inventory updates regularly as vehicles are added and sold. The inventory page reflects current availability sources.
+Inventory updates regularly as vehicles are added and sold. Our Facebook inventory page reflects current availability.
 
 ## What To Expect When Buying
 
@@ -37,7 +37,7 @@ If needed, buyers can apply for financing through SQ Motors lender partners befo
 
 ### How can I browse current inventory?
 
-Use the inventory page and linked listing sources to review currently available vehicles.
+Use the inventory page to open SQ Motors Facebook inventory listings and review currently available vehicles.
 
 ### How often does inventory change?
 

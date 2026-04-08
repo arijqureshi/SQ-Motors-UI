@@ -1,176 +1,14 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/seo/Breadcrumbs';
-import FaqSection from '../components/seo/FaqSection';
-import InternalLinksPanel from '../components/seo/InternalLinksPanel';
-import LastUpdated from '../components/seo/LastUpdated';
 import SeoHead from '../components/seo/SeoHead';
 import ServiceAreaBlock from '../components/seo/ServiceAreaBlock';
 import { COMPANY_INFO } from '../constants';
 import { HOME_BREADCRUMB, getCorePageById, getLocalPageById } from '../config/seo';
 
-type InventoryPost = {
-  src: string;
-  height: number;
-  title: string;
-};
-
-const DEFAULT_POST_HEIGHT = 585;
-
-const parseCsv = (csvText: string): string[][] => {
-  const rows: string[][] = [];
-  let row: string[] = [];
-  let current = '';
-  let inQuotes = false;
-
-  for (let i = 0; i <= csvText.length; i += 1) {
-    const char = csvText[i] ?? '\n';
-    const next = csvText[i + 1];
-
-    if (char === '"') {
-      if (inQuotes && next === '"') {
-        current += '"';
-        i += 1;
-      } else {
-        inQuotes = !inQuotes;
-      }
-      continue;
-    }
-
-    if (char === ',' && !inQuotes) {
-      row.push(current.trim());
-      current = '';
-      continue;
-    }
-
-    if ((char === '\n' || char === '\r') && !inQuotes) {
-      if (char === '\r' && next === '\n') {
-        i += 1;
-      }
-      row.push(current.trim());
-      current = '';
-
-      if (row.some((cell) => cell.length > 0)) {
-        rows.push(row);
-      }
-      row = [];
-      continue;
-    }
-
-    current += char;
-  }
-
-  return rows;
-};
-
-const extractSrc = (rawValue: string): string | null => {
-  const value = rawValue.trim();
-  if (!value) {
-    return null;
-  }
-
-  if (value.startsWith('<iframe')) {
-    const match = value.match(/src=["']([^"']+)["']/i);
-    return match?.[1] ?? null;
-  }
-
-  return value;
-};
-
-const parseInventoryPosts = (csvText: string): InventoryPost[] => {
-  const rows = parseCsv(csvText);
-  if (rows.length < 2) {
-    return [];
-  }
-
-  const headers = rows[0].map((header) => header.toLowerCase().trim());
-  const srcIndex = headers.findIndex((header) => header === 'iframe_src' || header === 'src');
-  const heightIndex = headers.findIndex((header) => header === 'height');
-  const titleIndex = headers.findIndex((header) => header === 'title');
-
-  if (srcIndex === -1) {
-    return [];
-  }
-
-  return rows
-    .slice(1)
-    .map((row, index) => {
-      const sourceValue = row[srcIndex] ?? '';
-      const src = extractSrc(sourceValue);
-
-      if (!src) {
-        return null;
-      }
-
-      const parsedHeight = Number.parseInt(row[heightIndex] ?? '', 10);
-      const safeHeight = Number.isFinite(parsedHeight) && parsedHeight >= 450 && parsedHeight <= 900
-        ? parsedHeight
-        : DEFAULT_POST_HEIGHT;
-      const title = (row[titleIndex] ?? '').trim() || `SQ Motors post ${index + 1}`;
-
-      return { src, height: safeHeight, title };
-    })
-    .filter((post): post is InventoryPost => post !== null);
-};
-
 const inventoryPage = getCorePageById('inventory');
 const springfieldPage = getLocalPageById('springfield');
 
 const Inventory = () => {
-  const [posts, setPosts] = useState<InventoryPost[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-
-  useEffect(() => {
-    const feedUrl = import.meta.env.VITE_INVENTORY_SHEET_CSV_URL?.trim();
-
-    if (!feedUrl) {
-      setHasError(true);
-      setIsLoading(false);
-      return;
-    }
-
-    let isMounted = true;
-
-    const loadPosts = async () => {
-      try {
-        const response = await fetch(feedUrl, { cache: 'no-store' });
-        if (!response.ok) {
-          throw new Error(`Failed to fetch inventory feed: ${response.status}`);
-        }
-
-        const csvText = await response.text();
-        const parsedPosts = parseInventoryPosts(csvText);
-
-        if (!isMounted) {
-          return;
-        }
-
-        if (parsedPosts.length > 0) {
-          setPosts(parsedPosts);
-          setHasError(false);
-        } else {
-          setHasError(true);
-        }
-      } catch (error) {
-        console.error('Failed to fetch inventory feed.', error);
-        if (isMounted) {
-          setHasError(true);
-        }
-      } finally {
-        if (isMounted) {
-          setIsLoading(false);
-        }
-      }
-    };
-
-    void loadPosts();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
   return (
     <div className="min-h-screen bg-gray-100 px-4 py-16">
       <SeoHead
@@ -185,103 +23,111 @@ const Inventory = () => {
         <Breadcrumbs items={[HOME_BREADCRUMB, { label: 'Inventory', path: inventoryPage.path }]} />
 
         <div className="rounded-lg border border-gray-200 bg-white p-6 mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-3">Recently Added Inventory</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-3">Used Car Inventory</h1>
           <p className="text-gray-700 mb-2">SQ Motors is a used car dealership serving the Springfield, Missouri area.</p>
-          <p className="text-gray-600">Browse our current listing feed and contact us directly to confirm availability.</p>
+          <p className="text-gray-600">
+            We publish our latest available vehicles directly on Facebook. Use the links below to browse inventory and reach out when you find a vehicle you like.
+          </p>
         </div>
 
         <ServiceAreaBlock className="mb-8" />
 
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
-          <div>
-            <p className="text-xs font-semibold text-red-600 tracking-widest uppercase mb-2">Inventory</p>
-            <h2 className="text-3xl font-bold text-gray-900">Current Listings Feed</h2>
-          </div>
-          <a
-            href={COMPANY_INFO.facebookMarketplace}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors whitespace-nowrap"
-          >
-            View Full Inventory
-          </a>
-        </div>
-
-        <section className="mb-10">
-          {isLoading && (
-            <p className="text-center text-gray-600">Loading inventory...</p>
-          )}
-
-          {!isLoading && hasError && (
-            <p className="text-center text-gray-700">
-              Failed to fetch inventory.
-              {' '}
+        <section className="grid md:grid-cols-3 gap-5 mb-10">
+          <article className="rounded-lg border border-gray-200 bg-white p-6 md:col-span-2">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-3">Browse Current Inventory on Facebook</h2>
+            <p className="text-gray-600 mb-5">
+              Inventory listings are hosted on our Facebook page so you can see the most current available vehicles in one place.
+            </p>
+            <div className="flex flex-wrap gap-3">
               <a
                 href={COMPANY_INFO.facebookPage}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-600 font-semibold hover:text-red-700"
+                className="inline-flex items-center px-6 py-3 rounded-md bg-red-600 text-white font-semibold hover:bg-red-700 transition-colors"
               >
-                View on Facebook
+                View Inventory on Facebook
               </a>
-            </p>
-          )}
-
-          {!isLoading && !hasError && (
-            <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6">
-              {posts.map((post, index) => (
-                <iframe
-                  key={`${post.src}-${index}`}
-                  src={post.src}
-                  title={post.title}
-                  width="100%"
-                  height={String(post.height)}
-                  className="w-full max-w-[500px] justify-self-center"
-                  style={{ border: 'none', overflow: 'hidden' }}
-                  scrolling="no"
-                  frameBorder={0}
-                  allowFullScreen
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  loading="lazy"
-                />
-              ))}
+              <a
+                href={COMPANY_INFO.facebookMarketplace}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 rounded-md border border-gray-300 text-gray-900 font-semibold hover:bg-gray-50 transition-colors"
+              >
+                Open Marketplace Profile
+              </a>
             </div>
-          )}
+          </article>
+
+          <article className="rounded-lg border border-gray-200 bg-white p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Need Help Fast?</h3>
+            <p className="text-gray-600 mb-4">Call us with the listing you found and we can confirm current availability.</p>
+            <a
+              href={`tel:${COMPANY_INFO.phone.replace(/\D/g, '')}`}
+              className="inline-flex items-center px-5 py-3 rounded-md bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors"
+            >
+              Call {COMPANY_INFO.phone}
+            </a>
+          </article>
         </section>
 
-        <section className="grid lg:grid-cols-2 gap-6 mb-8">
-          <article className="rounded-lg border border-gray-200 bg-white p-6">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">Types of Vehicles We Carry</h2>
+        <section className="grid sm:grid-cols-2 gap-3 mb-8">
+          <article className="rounded-md border border-gray-200 bg-white p-4">
+            <h2 className="text-base font-semibold text-gray-900 mb-1">Types of Vehicles We Carry</h2>
             <p className="text-gray-600">Our selection usually includes used cars, trucks, and SUVs chosen for reliability, value, and everyday driving in Southwest Missouri.</p>
           </article>
-          <article className="rounded-lg border border-gray-200 bg-white p-6">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">How Often Inventory Updates</h2>
-            <p className="text-gray-600">Inventory updates regularly as units are added or sold. Online listings are refreshed based on the latest source data.</p>
+          <article className="rounded-md border border-gray-200 bg-white p-4">
+            <h2 className="text-base font-semibold text-gray-900 mb-1">How Often Inventory Updates</h2>
+            <p className="text-gray-600">Inventory updates regularly as vehicles are added and sold. Check our Facebook inventory page for the latest availability.</p>
           </article>
-          <article className="rounded-lg border border-gray-200 bg-white p-6">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">What To Expect When Buying</h2>
-            <p className="text-gray-600">Compare options, ask for details, schedule a visit, and work directly with our team on next steps that fit your budget and timeline.</p>
+          <article className="rounded-md border border-gray-200 bg-white p-4">
+            <h2 className="text-base font-semibold text-gray-900 mb-1">What To Expect When Buying</h2>
+            <p className="text-gray-600">Browse listings, contact us with your top picks, then visit for details, test drives, and purchase guidance.</p>
           </article>
-          <article className="rounded-lg border border-gray-200 bg-white p-6">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">Financing Options</h2>
+          <article className="rounded-md border border-gray-200 bg-white p-4">
+            <h2 className="text-base font-semibold text-gray-900 mb-1">Financing Options</h2>
             <p className="text-gray-600">If you need financing, you can review options and apply online before finalizing your purchase in person.</p>
           </article>
         </section>
 
-        <LastUpdated contextLabel="Inventory" className="mb-8" />
+        <section className="rounded-lg border border-gray-200 bg-white p-6 mb-8">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">How To Shop Inventory With SQ Motors</h2>
+          <ol className="grid md:grid-cols-3 gap-4 text-sm">
+            <li className="rounded-md border border-gray-100 p-4">
+              <p className="font-semibold text-gray-900 mb-1">1. Browse Facebook Listings</p>
+              <p className="text-gray-600">View our current posts and save vehicles that match your goals.</p>
+            </li>
+            <li className="rounded-md border border-gray-100 p-4">
+              <p className="font-semibold text-gray-900 mb-1">2. Contact Our Team</p>
+              <p className="text-gray-600">Send us the listing or call us so we can confirm availability and details.</p>
+            </li>
+            <li className="rounded-md border border-gray-100 p-4">
+              <p className="font-semibold text-gray-900 mb-1">3. Visit and Finalize</p>
+              <p className="text-gray-600">Test drive, review options, and complete your purchase with financing or trade-in support.</p>
+            </li>
+          </ol>
+        </section>
 
-        <FaqSection title="Inventory FAQ" items={inventoryPage.faq ?? []} className="mb-8" />
+        <section className="rounded-lg border border-gray-200 bg-white p-5 mb-8">
+          <h2 className="text-lg font-semibold text-gray-900 mb-3">Inventory FAQ</h2>
+          <div className="space-y-2">
+            {(inventoryPage.faq ?? []).map((item) => (
+              <details key={item.question} className="rounded-md border border-gray-100 p-3">
+                <summary className="cursor-pointer text-sm font-semibold text-gray-900">{item.question}</summary>
+                <p className="text-sm text-gray-600 mt-2">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
 
-        <InternalLinksPanel
-          title="Related Pages"
-          links={[
-            { to: '/financing', label: 'Financing', description: 'Review requirements and apply online.' },
-            { to: '/trade-in', label: 'Trade-In', description: 'Share your current vehicle details for an evaluation.' },
-            { to: '/contact', label: 'Contact', description: 'Ask about listings and availability.' },
-            { to: springfieldPage.path, label: 'Springfield Service Hub', description: 'Explore local service-area content.' },
-          ]}
-          className="mb-8"
-        />
+        <section className="rounded-lg border border-gray-200 bg-white p-5 mb-8">
+          <h2 className="text-lg font-semibold text-gray-900 mb-3">Related Pages</h2>
+          <div className="flex flex-wrap gap-4 text-sm">
+            <Link className="text-red-600 font-semibold hover:text-red-700" to="/financing">Financing</Link>
+            <Link className="text-red-600 font-semibold hover:text-red-700" to="/trade-in">Trade-In</Link>
+            <Link className="text-red-600 font-semibold hover:text-red-700" to="/contact">Contact</Link>
+            <Link className="text-red-600 font-semibold hover:text-red-700" to={springfieldPage.path}>Springfield Service Hub</Link>
+          </div>
+        </section>
 
         <div className="text-center mt-8">
           <Link

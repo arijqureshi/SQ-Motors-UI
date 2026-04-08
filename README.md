@@ -2,12 +2,12 @@
 
 This project is a React + TypeScript + Vite frontend for SQ Motors.
 
-It now includes a build-time SEO and LLM discoverability system that works with the current inventory setup (Google Sheet + Facebook iframe embeds) and stays compatible with a future structured inventory backend.
+It now includes a build-time SEO and LLM discoverability system that works with the current inventory setup (direct Facebook inventory links) and stays compatible with a future structured inventory backend.
 
 ## Core Architecture
 
 - App framework: `React + TypeScript + Vite`
-- Inventory source today: `VITE_INVENTORY_SHEET_CSV_URL` (Google Sheet CSV feed)
+- Inventory source today: SQ Motors Facebook page / Marketplace listings
 - Canonical domain: `https://www.sqmotorsllc.com`
 - Single SEO source of truth: [`src/config/seo.config.json`](src/config/seo.config.json)
 
