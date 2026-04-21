@@ -28,9 +28,12 @@ const Footer = () => {
               <p>{COMPANY_INFO.address}</p>
               <p>{COMPANY_INFO.phone}</p>
               <p>{COMPANY_INFO.email}</p>
-              <p>Mon-Wed: {COMPANY_INFO.hours.monday}</p>
+              <p>Monday: {COMPANY_INFO.hours.monday}</p>
+              <p>Tuesday: {COMPANY_INFO.hours.tuesday}</p>
+              <p>Wednesday: {COMPANY_INFO.hours.wednesday}</p>
               <p>Thursday: {COMPANY_INFO.hours.thursday}</p>
-              <p>Fri-Sat: {COMPANY_INFO.hours.friday}</p>
+              <p>Friday: {COMPANY_INFO.hours.friday}</p>
+              <p>Saturday: {COMPANY_INFO.hours.saturday}</p>
               <p>Sunday: {COMPANY_INFO.hours.sunday}</p>
             </div>
             <div className="flex flex-wrap gap-4 mt-4 text-sm">

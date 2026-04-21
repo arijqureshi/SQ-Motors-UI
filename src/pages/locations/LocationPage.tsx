@@ -99,7 +99,7 @@ const LocationPage = () => {
 
         <section className="rounded-lg border border-gray-200 bg-white p-5 mb-8">
           <p className="text-sm text-gray-700 mb-2">{COMPANY_INFO.address} | {COMPANY_INFO.phone}</p>
-          <p className="text-sm text-gray-700 mb-2">Mon-Sat hours available on contact page.</p>
+          <p className="text-sm text-gray-700 mb-2">View full business hours on the contact page.</p>
           <a href={COMPANY_INFO.mapUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-red-600 font-semibold hover:text-red-700">
             Open map directions
           </a>

@@ -24,9 +24,8 @@
       },
       {
         "dayOfWeek": "Tuesday",
-        "opens": "09:00",
-        "closes": "16:00",
-        "label": "9 AM - 4 PM"
+        "closed": true,
+        "label": "Closed"
       },
       {
         "dayOfWeek": "Wednesday",
